@@ -1,0 +1,975 @@
+{
+  "common": [
+    [
+      "モチスライム",
+      "round pale slime"
+    ],
+    [
+      "ハネネズミ",
+      "wing eared mouse"
+    ],
+    [
+      "コケムシ",
+      "moss pillbug"
+    ],
+    [
+      "ツノウサギ",
+      "tiny horn rabbit"
+    ],
+    [
+      "マメトカゲ",
+      "bean lizard"
+    ],
+    [
+      "ハリモグラ",
+      "spiky mole"
+    ],
+    [
+      "シダコウモリ",
+      "fern bat"
+    ],
+    [
+      "キノコダケ",
+      "walking mushroom"
+    ],
+    [
+      "ヨルガエル",
+      "star eyed frog"
+    ],
+    [
+      "オチバグモ",
+      "leaf spider"
+    ],
+    [
+      "クルミリス",
+      "walnut squirrel"
+    ],
+    [
+      "ツタヘビ",
+      "vine snake"
+    ],
+    [
+      "マユガ",
+      "silk moth"
+    ],
+    [
+      "ヒトツメ",
+      "one eyed pebble"
+    ],
+    [
+      "ミツバチビ",
+      "honey bee monster"
+    ],
+    [
+      "キリフクロウ",
+      "fog owl"
+    ],
+    [
+      "ヒカリゴケ",
+      "glowing moss blob"
+    ],
+    [
+      "ネムリバナ",
+      "sleeping flower creature"
+    ],
+    [
+      "カラクリドングリ",
+      "mechanical acorn"
+    ],
+    [
+      "ミドリカタツムリ",
+      "emerald snail"
+    ],
+    [
+      "ヒバナムシ",
+      "spark firefly"
+    ],
+    [
+      "コゲネズミ",
+      "charcoal mouse"
+    ],
+    [
+      "マグマダマ",
+      "small lava ball"
+    ],
+    [
+      "アカサソリ",
+      "red scorpion"
+    ],
+    [
+      "ススコウモリ",
+      "soot bat"
+    ],
+    [
+      "ヒノコガメ",
+      "ember turtle"
+    ],
+    [
+      "オニビ",
+      "floating blue flame"
+    ],
+    [
+      "イワカニ",
+      "volcanic rock crab"
+    ],
+    [
+      "ヤケドリ",
+      "fire chick"
+    ],
+    [
+      "カザントカゲ",
+      "volcano gecko"
+    ],
+    [
+      "カエンモグラ",
+      "fire mole"
+    ],
+    [
+      "ホムラガ",
+      "flame moth"
+    ],
+    [
+      "セキタンコロ",
+      "coal golem"
+    ],
+    [
+      "ヒダルマ",
+      "burning straw doll"
+    ],
+    [
+      "サビグモ",
+      "rust spider"
+    ],
+    [
+      "アカツノ",
+      "red horn imp"
+    ],
+    [
+      "スナガエル",
+      "desert toad"
+    ],
+    [
+      "サボコロ",
+      "cactus creature"
+    ],
+    [
+      "ホネヘビ",
+      "skeleton snake"
+    ],
+    [
+      "ツボオバケ",
+      "haunted clay jar"
+    ],
+    [
+      "サメコ",
+      "baby shark"
+    ],
+    [
+      "アワクラゲ",
+      "bubble jellyfish"
+    ],
+    [
+      "シオガニ",
+      "salt crab"
+    ],
+    [
+      "ユキダル",
+      "tiny snowman"
+    ],
+    [
+      "コオリムシ",
+      "ice beetle"
+    ],
+    [
+      "ヒトデコ",
+      "starfish monster"
+    ],
+    [
+      "ミズダマ",
+      "water blob"
+    ],
+    [
+      "パールガイ",
+      "pearl clam"
+    ],
+    [
+      "カイガラヤドカリ",
+      "shell hermit crab"
+    ],
+    [
+      "アオウミウシ",
+      "blue sea slug"
+    ],
+    [
+      "コユキウサギ",
+      "snow rabbit"
+    ],
+    [
+      "ハコフグ",
+      "box fish monster"
+    ],
+    [
+      "イソギンコ",
+      "walking anemone"
+    ],
+    [
+      "サンゴムシ",
+      "coral bug"
+    ],
+    [
+      "シラナミ",
+      "white wave sprite"
+    ],
+    [
+      "ツララヘビ",
+      "icicle snake"
+    ],
+    [
+      "フユモグラ",
+      "winter mole"
+    ],
+    [
+      "コゴエドリ",
+      "frost chick"
+    ],
+    [
+      "ヒョウガトカゲ",
+      "glacial lizard"
+    ],
+    [
+      "ミズクラゲ",
+      "water jelly sprite"
+    ],
+    [
+      "カナリアン",
+      "gold canary"
+    ],
+    [
+      "シロコウモリ",
+      "white bat"
+    ],
+    [
+      "キラタマ",
+      "glitter egg creature"
+    ],
+    [
+      "カケラゴーレム",
+      "crystal shard golem"
+    ],
+    [
+      "デンキムシ",
+      "electric bug"
+    ],
+    [
+      "ハグルマ",
+      "tiny gear creature"
+    ],
+    [
+      "ホシガエル",
+      "star frog"
+    ],
+    [
+      "シロハナ",
+      "white blossom sprite"
+    ],
+    [
+      "カガミムシ",
+      "mirror beetle"
+    ],
+    [
+      "トケイグモ",
+      "clock spider"
+    ],
+    [
+      "ヒカリヘビ",
+      "light serpent"
+    ],
+    [
+      "フワワタ",
+      "cotton cloud creature"
+    ],
+    [
+      "カネコゾウ",
+      "bell imp"
+    ],
+    [
+      "ランタンコ",
+      "lantern sprite"
+    ],
+    [
+      "トウメイガ",
+      "glass moth"
+    ],
+    [
+      "ホシネズミ",
+      "star mouse"
+    ],
+    [
+      "オルゴルン",
+      "music box mimic"
+    ],
+    [
+      "コハクムシ",
+      "amber insect"
+    ],
+    [
+      "シロツノ",
+      "ivory imp"
+    ],
+    [
+      "ハネペン",
+      "living feather quill"
+    ],
+    [
+      "クロスライム",
+      "black slime"
+    ],
+    [
+      "ヨルネズミ",
+      "night rat"
+    ],
+    [
+      "カゲコウモリ",
+      "shadow bat"
+    ],
+    [
+      "ドクロムシ",
+      "skull beetle"
+    ],
+    [
+      "クロメダマ",
+      "floating black eye"
+    ],
+    [
+      "コソドロ",
+      "tiny masked imp"
+    ],
+    [
+      "ボロヌノ",
+      "haunted rag"
+    ],
+    [
+      "クモイト",
+      "cobweb ghost"
+    ],
+    [
+      "クチナシ",
+      "faceless spirit"
+    ],
+    [
+      "カゲヘビ",
+      "shadow snake"
+    ],
+    [
+      "ヤミダケ",
+      "dark mushroom"
+    ],
+    [
+      "ウラミビ",
+      "purple ghost flame"
+    ],
+    [
+      "ホネコロ",
+      "rolling skull"
+    ],
+    [
+      "ネムリガ",
+      "sleep moth"
+    ],
+    [
+      "ツキカタツムリ",
+      "moon snail"
+    ],
+    [
+      "クロガラス",
+      "small raven"
+    ],
+    [
+      "カゲガニ",
+      "shadow crab"
+    ],
+    [
+      "サビドール",
+      "rust doll"
+    ],
+    [
+      "コモリグモ",
+      "brood spider"
+    ],
+    [
+      "ムラサキガエル",
+      "purple toad"
+    ],
+    [
+      "スナモチ",
+      "sand slime"
+    ],
+    [
+      "コロイワ",
+      "rolling boulder"
+    ],
+    [
+      "イシバネ",
+      "stone wing bug"
+    ],
+    [
+      "ミイラネズミ",
+      "mummy mouse"
+    ],
+    [
+      "コバルトガメ",
+      "cobalt turtle"
+    ],
+    [
+      "ウツボカズラ",
+      "pitcher plant monster"
+    ],
+    [
+      "イバラダマ",
+      "thorn ball"
+    ],
+    [
+      "クサビト",
+      "little grass person"
+    ],
+    [
+      "コダマボウ",
+      "tree stump spirit"
+    ],
+    [
+      "ネジコ",
+      "screw automaton"
+    ],
+    [
+      "キンゾクガエル",
+      "metal frog"
+    ],
+    [
+      "カジリバ",
+      "biting venus flytrap"
+    ],
+    [
+      "ハサミムシ",
+      "armored earwig"
+    ],
+    [
+      "トビウオ",
+      "winged fish"
+    ],
+    [
+      "スナトビ",
+      "sand hopper"
+    ],
+    [
+      "タネコ",
+      "seedling creature"
+    ],
+    [
+      "ハチノス",
+      "walking honeycomb"
+    ],
+    [
+      "アカキノコ",
+      "red mushroom"
+    ],
+    [
+      "カミクズ",
+      "paper ghost"
+    ],
+    [
+      "カミナリダマ",
+      "electric orb"
+    ],
+    [
+      "ユウレイガイ",
+      "ghost shell"
+    ],
+    [
+      "ユメクラゲ",
+      "dream jellyfish"
+    ],
+    [
+      "ハナモグラ",
+      "flower mole"
+    ],
+    [
+      "ヤシガニ",
+      "palm crab"
+    ],
+    [
+      "クチバシ",
+      "beak shell creature"
+    ],
+    [
+      "ホネトカゲ",
+      "bone lizard"
+    ],
+    [
+      "クロマユ",
+      "black cocoon"
+    ],
+    [
+      "ガラクタン",
+      "scrap metal critter"
+    ],
+    [
+      "トゲフグ",
+      "spiny pufferfish"
+    ],
+    [
+      "アブラコウモリ",
+      "oil bat"
+    ],
+    [
+      "コウモリガサ",
+      "haunted umbrella"
+    ],
+    [
+      "ヒスイガエル",
+      "jade frog"
+    ],
+    [
+      "シロキツネ",
+      "white fox cub"
+    ],
+    [
+      "マガタマ",
+      "magatama spirit"
+    ],
+    [
+      "ホコリムシ",
+      "dust mite monster"
+    ],
+    [
+      "ヒトクイボン",
+      "biting book mimic"
+    ],
+    [
+      "ハネカギ",
+      "winged key creature"
+    ],
+    [
+      "サカサツボ",
+      "upside down urn spirit"
+    ],
+    [
+      "ナミダイシ",
+      "teardrop crystal creature"
+    ],
+    [
+      "ネムリイシ",
+      "sleeping stone creature"
+    ],
+    [
+      "マヨイビ",
+      "lost will o wisp"
+    ]
+  ],
+  "elite": [
+    [
+      "銀牙狼",
+      "霧の銀牙狼",
+      "silver wolf, then larger mist armored alpha wolf"
+    ],
+    [
+      "蔦甲獣",
+      "古樹の蔦甲獣",
+      "vine armadillo, then huge ancient tree armored beast"
+    ],
+    [
+      "花冠鹿",
+      "春嵐の花冠鹿",
+      "flower deer, then antlered blossom stag"
+    ],
+    [
+      "樹槍兵",
+      "樹海の槍将",
+      "wooden spear soldier, then forest general"
+    ],
+    [
+      "琥珀蜂",
+      "黄金の女王蜂",
+      "amber bee, then regal queen bee"
+    ],
+    [
+      "翡翠蛇",
+      "碧鱗の大蛇",
+      "jade snake, then giant feathered jade serpent"
+    ],
+    [
+      "苔牙猪",
+      "山砕きの苔牙猪",
+      "moss boar, then enormous tusked mountain boar"
+    ],
+    [
+      "枝角梟",
+      "森守りの枝角梟",
+      "branch antler owl, then sacred great owl"
+    ],
+    [
+      "若葉精",
+      "深緑の庭師",
+      "leaf fairy, then elegant garden dryad"
+    ],
+    [
+      "竹甲兵",
+      "竹林の武者",
+      "bamboo soldier, then bamboo samurai"
+    ],
+    [
+      "焔牙犬",
+      "溶岩の双牙犬",
+      "fire hound, then lava armored hellhound"
+    ],
+    [
+      "紅鎧兵",
+      "熔鉄の重騎兵",
+      "red armor soldier, then heavy molten iron knight"
+    ],
+    [
+      "火走蜥蜴",
+      "灼砂の走竜",
+      "running fire lizard, then desert raptor"
+    ],
+    [
+      "炭角牛",
+      "黒炉の猛牛",
+      "coal bull, then huge furnace bull"
+    ],
+    [
+      "火羽鷹",
+      "紅天の火羽鷹",
+      "fire hawk, then majestic flame hawk"
+    ],
+    [
+      "赤砂蟲",
+      "灼熱の大砂蟲",
+      "sand worm, then huge armored desert worm"
+    ],
+    [
+      "炎拳鬼",
+      "焔獄の拳闘鬼",
+      "fire fist ogre, then muscular volcanic brawler"
+    ],
+    [
+      "銅翼蝙蝠",
+      "熔銅の翼王",
+      "copper bat, then copper winged monster"
+    ],
+    [
+      "灯火精",
+      "燈楼の火守り",
+      "lamp fairy, then tall lantern guardian"
+    ],
+    [
+      "灰刃蟷螂",
+      "灰燼の鎌将",
+      "ash mantis, then armored scythe mantis"
+    ],
+    [
+      "潮牙獣",
+      "深潮の海豹王",
+      "water seal beast, then armored sea lion king"
+    ],
+    [
+      "氷角鹿",
+      "凍原の白角鹿",
+      "ice deer, then great icy antler stag"
+    ],
+    [
+      "珊瑚兵",
+      "珊瑚城の衛兵長",
+      "coral soldier, then coral palace guard"
+    ],
+    [
+      "蒼鱗蛇",
+      "潮流の大海蛇",
+      "blue sea snake, then great coiled sea serpent"
+    ],
+    [
+      "雪鎧熊",
+      "氷嶺の重甲熊",
+      "snow bear, then glacial armored bear"
+    ],
+    [
+      "真珠精",
+      "真珠殿の巫女",
+      "pearl fairy, then pearl priestess"
+    ],
+    [
+      "霜羽鳥",
+      "絶零の霜翼鳥",
+      "frost bird, then long icy winged bird"
+    ],
+    [
+      "帆甲蟹",
+      "沈船の大甲蟹",
+      "sail crab, then shipwreck giant crab"
+    ],
+    [
+      "水鏡狐",
+      "湖面の水鏡狐",
+      "water mirror fox, then elegant many tailed water fox"
+    ],
+    [
+      "蒼刃騎士",
+      "蒼氷の剣将",
+      "blue sword knight, then ice sword general"
+    ],
+    [
+      "白翼獅子",
+      "聖門の白翼獅子",
+      "white winged lion, then gold armored winged lion"
+    ],
+    [
+      "金環蛇",
+      "日輪の金環蛇",
+      "gold ring snake, then huge sun halo snake"
+    ],
+    [
+      "玻璃人形",
+      "星硝子の舞姫",
+      "glass doll, then crystalline dancer"
+    ],
+    [
+      "雷針蜂",
+      "轟雷の針后",
+      "lightning bee, then lightning queen wasp"
+    ],
+    [
+      "銀機兵",
+      "天工の銀機将",
+      "silver robot, then celestial silver mech"
+    ],
+    [
+      "灯角兎",
+      "月灯の大角兎",
+      "lantern rabbit, then magical antler moon rabbit"
+    ],
+    [
+      "鐘翼竜",
+      "暁鐘の飛竜",
+      "bell wing dragon, then majestic bell wing wyvern"
+    ],
+    [
+      "光槍兵",
+      "白金の槍将",
+      "light spear soldier, then platinum lancer"
+    ],
+    [
+      "影牙豹",
+      "黒霧の影牙豹",
+      "shadow panther, then smoky armored panther"
+    ],
+    [
+      "夜翼蛾",
+      "夜帳の女王蛾",
+      "night moth, then queen night moth"
+    ],
+    [
+      "黒糸蜘蛛",
+      "深淵の織り手",
+      "black spider, then elegant abyss weaver spider"
+    ],
+    [
+      "幽鎧兵",
+      "亡国の幽鎧将",
+      "ghost knight, then spectral armored general"
+    ],
+    [
+      "紫晶蝙蝠",
+      "冥晶の大蝙蝠",
+      "amethyst bat, then huge crystal bat"
+    ],
+    [
+      "骸骨騎士",
+      "白骨の重騎士",
+      "skeleton knight, then heavy skeletal champion"
+    ],
+    [
+      "影縫人形",
+      "黒糸の操偶師",
+      "shadow puppet, then eerie masked puppeteer"
+    ],
+    [
+      "夜鳴鳥",
+      "黄泉の夜鳴鳥",
+      "night song bird, then spectral long tailed raven"
+    ],
+    [
+      "黒頁精",
+      "禁書の司書",
+      "book spirit, then ancient floating grimoire librarian"
+    ]
+  ],
+  "rare": [
+    [
+      "アウレア",
+      "曙光姫アウレア",
+      "黎明の星冠神アウレア",
+      "sun maiden, celestial armored sun princess, magnificent sun goddess"
+    ],
+    [
+      "ヴェルド",
+      "翠剣士ヴェルド",
+      "世界樹の剣聖ヴェルド",
+      "leaf swordsman, emerald knight, world tree sword saint"
+    ],
+    [
+      "イグニス",
+      "火冠竜イグニス",
+      "終焔の創世竜イグニス",
+      "small crown fire dragon, armored fire dragon, colossal six wing fire dragon"
+    ],
+    [
+      "ネレイス",
+      "蒼祈姫ネレイス",
+      "星海の祈神ネレイス",
+      "water priestess, ocean princess, cosmic sea goddess"
+    ],
+    [
+      "オブシア",
+      "黒晶騎士オブシア",
+      "永劫の黒晶王オブシア",
+      "black crystal knight, crystal armored lord, obsidian cosmic emperor"
+    ],
+    [
+      "セラフ",
+      "白羽使セラフ",
+      "七天の翼神セラフ",
+      "white wing angel, six wing guardian, radiant celestial archangel"
+    ],
+    [
+      "ラグナ",
+      "雷牙獣ラグナ",
+      "轟嵐の雷神獣ラグナ",
+      "lightning tiger cub, armored lightning tiger, huge storm god tiger"
+    ],
+    [
+      "シルヴァ",
+      "銀月狐シルヴァ",
+      "月蝕の銀狐神シルヴァ",
+      "silver fox, moon fox, elegant many tailed eclipse fox"
+    ],
+    [
+      "ガルド",
+      "巨盾兵ガルド",
+      "山岳の守護神ガルド",
+      "shield knight, giant shield golem, mountain titan"
+    ],
+    [
+      "リュシア",
+      "夢歌姫リュシア",
+      "夢幻の星歌神リュシア",
+      "dream singer, ethereal harp maiden, celestial music goddess"
+    ],
+    [
+      "ザハク",
+      "毒鱗竜ザハク",
+      "万毒の冥竜王ザハク",
+      "poison dragon hatchling, purple venom dragon, imposing venom hydra"
+    ],
+    [
+      "アステル",
+      "星機兵アステル",
+      "天球の星機神アステル",
+      "star robot, celestial automaton, magnificent astrolabe mech"
+    ],
+    [
+      "フローラ",
+      "花苑姫フローラ",
+      "万花の生命神フローラ",
+      "flower girl, garden dryad queen, world flower goddess"
+    ],
+    [
+      "グラナ",
+      "紅蓮剣士グラナ",
+      "灼天の紅剣帝グラナ",
+      "red sword warrior, flame swordsman, flame sword emperor"
+    ],
+    [
+      "ローレン",
+      "白氷騎士ローレン",
+      "永凍の白帝ローレン",
+      "white ice knight, frost paladin, eternal ice emperor"
+    ],
+    [
+      "ノイエ",
+      "宵翼姫ノイエ",
+      "星喰いの夜翼神ノイエ",
+      "bat wing maiden, dark wing princess, cosmic night queen"
+    ],
+    [
+      "オルフェ",
+      "黄金奏者オルフェ",
+      "天律の奏神オルフェ",
+      "gold bard, celestial harp player, golden music deity"
+    ],
+    [
+      "バハル",
+      "砂嵐竜バハル",
+      "大陸の砂皇竜バハル",
+      "sand dragon cub, desert dragon, vast armored sand dragon"
+    ],
+    [
+      "ミラージュ",
+      "幻鏡獣ミラージュ",
+      "虚空の幻鏡神ミラージュ",
+      "mirror cat, crystal mirror sphinx, magnificent mirror god beast"
+    ],
+    [
+      "ウルズ",
+      "古樹巨人ウルズ",
+      "原初の樹神ウルズ",
+      "wooden giant, ancient tree colossus, primordial world tree titan"
+    ],
+    [
+      "カロン",
+      "渡守カロン",
+      "境界の冥舟王カロン",
+      "hooded ferryman, ghost boat captain, imposing underworld boat king"
+    ],
+    [
+      "エクリア",
+      "聖環竜エクリア",
+      "天頂の聖環神竜エクリア",
+      "halo dragon, radiant ring dragon, celestial ringed dragon god"
+    ],
+    [
+      "スカディ",
+      "霜狼姫スカディ",
+      "白夜の氷狼神スカディ",
+      "wolf girl, ice wolf queen, aurora wolf goddess"
+    ],
+    [
+      "フェルム",
+      "鉄炉兵フェルム",
+      "神造の鉄炉王フェルム",
+      "iron furnace golem, heavy furnace robot, giant divine forge mech"
+    ],
+    [
+      "ティルナ",
+      "妖精姫ティルナ",
+      "忘郷の妖精女王ティルナ",
+      "small fairy, fairy princess, majestic woodland fairy queen"
+    ],
+    [
+      "レグルス",
+      "獅冠王子レグルス",
+      "万王の獅子神レグルス",
+      "lion prince, lion king, immense golden lion deity"
+    ],
+    [
+      "アビス",
+      "深淵竜アビス",
+      "無窮の深淵神竜アビス",
+      "abyss dragon cub, dark ocean dragon, magnificent abyss leviathan"
+    ],
+    [
+      "ユグナ",
+      "種守りユグナ",
+      "星を継ぐ樹冠神ユグナ",
+      "seed guardian, emerald tree guardian, cosmic tree crown deity"
+    ]
+  ]
+}
