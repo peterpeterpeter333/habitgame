@@ -1,0 +1,16 @@
+{
+  "tool": "Built-in image_gen",
+  "release": "4.3.0",
+  "assets": [
+    {
+      "file": "quest-forge-lobby-v4.3.0.png",
+      "repositoryPath": "assets/luminous-sanctuary-v1.png",
+      "prompt": "Use case: stylized-concept. Asset type: polished panoramic background illustration for an original fantasy monster-companion RPG waiting lobby, no UI. Create a breathtaking but quiet moonlit forest sanctuary: ancient moss-covered pale stone terrace at the edge of a mirror lake, luminous turquoise water, tall graceful trees with translucent blue-green leaves, small hanging golden motes, distant soft violet mist and shafts of moonlight, refined painterly fantasy game concept art, exquisite tactile details, rich depth and restrained bloom. Wide 16:9 composition. The LEFT 45 percent should be atmospheric dark foliage and mist with low contrast and little detail, usable behind white interface text. On the RIGHT side leave a clear stone platform in the lower foreground on which a separate game companion sprite can stand; the wondrous lake and luminous tree canopy behind it. This is a universal safe resting place, no recognizable world map, no future regions, no monsters, no people, no readable text, no logos, no interface frames, no watermark. Cinematic sapphire and jade palette with warm delicate starlight, elegant and inviting, premium fantasy mobile RPG artwork, landscape."
+    },
+    {
+      "file": "quest-forge-summon-v4.3.0.png",
+      "repositoryPath": "assets/summon-gate-v1.png",
+      "prompt": "Use case: stylized-concept. Asset type: atmospheric backdrop behind a summoning gate in an original fantasy mobile RPG. A majestic ancient circular celestial stone gateway standing in a quiet enchanted grotto, subtle gold inlays, luminous teal and violet stardust gathering within the empty ring, crystal-blue reflective water at its base, trailing pale plants, soft volumetric light and tiny stars, luxurious painterly fantasy environment concept art. Wide 16:9 composition, circular portal centered, plenty of dark low-detail negative space on both sides and near bottom for readable UI overlay. Ethereal, mysterious, beautiful, polished fine details and restrained magical glow. No characters, no creatures, no eggs, no readable runes or text, no logos, no UI, no watermark. This backdrop must reveal no gameplay secrets or future world regions."
+    }
+  ]
+}
