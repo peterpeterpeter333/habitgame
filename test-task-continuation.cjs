@@ -80,7 +80,7 @@ test('中断した冒険は開始・課題リセット・育成で置き換え�
 
 test('再開課題が不正なら冒険と所持品を一切変更しない', () => {
   const game = pause(prepare());
-  const invalid = [null, '課題', {}, batch('短い').slice(1), [...batch('長い'), '11番'],
+  const invalid = [null, '課題', {}, [], Array(101).fill('上限を超える課題'),
     batch('空欄').map((value, i) => i === 4 ? '' : value),
     batch('空白').map((value, i) => i === 4 ? ' \n\t ' : value),
     batch('数値').map((value, i) => i === 4 ? 5 : value),

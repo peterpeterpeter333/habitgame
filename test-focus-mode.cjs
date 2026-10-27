@@ -20,6 +20,7 @@ function test(name, run) {
 function prepared(mode = 'focus') {
   const game = new QuestEngine();
   game.choose('leaf');
+  game.setTaskCount(10);
   for (let i = 0; i < 10; i++) game.setTask(i, '通常の課題 ' + (i + 1));
   game.s.nextTask = 4;
   game.setMode(mode);
@@ -147,7 +148,7 @@ test('集中2課題の達成で準備待ちになり、次の2課題で同じ戦
   assert.deepEqual(json(game.s.battle.taskResults), { 0: 'complete', 1: 'complete' });
   assert(game.s.battle.loot.gold > 0);
   const before = combatAndRewards(game);
-  for (const tasks of [[], Array(2), ['1件だけ'], ['1', '2', '3'], ['', '2'], ['1', ' '.repeat(3)], ['あ'.repeat(121), '2']]) {
+  for (const tasks of [[], Array(2), Array(101).fill('上限を超える課題'), ['', '2'], ['1', ' '.repeat(3)], ['あ'.repeat(121), '2']]) {
     const snapshot = json(game.s);
     assert.throws(() => game.resumeTasks(tasks, 5000));
     assert.deepEqual(json(game.s), snapshot);
