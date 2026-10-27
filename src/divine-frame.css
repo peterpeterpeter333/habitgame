@@ -1,0 +1,194 @@
+/* A gilded celestial frame. Every ornament is non-interactive and contains no world spoilers. */
+:root {
+  --divine-filigree: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20120%20120%22%20fill%3D%22none%22%3E%3Cg%20stroke%3D%22%23e9d29a%22%20stroke-width%3D%22.9%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M8%20113V35C8%2019%2019%208%2035%208h78M16%2098V38c0-12%2010-22%2022-22h60%22%2F%3E%3Cpath%20d%3D%22M8%2088c17-1%2028-12%2024-23-4-12-17-9-16%200%201%209%2014%2011%2021%200%206-10%201-22%206-28%205-7%2015-6%2017-1%204%209-6%2014-11%207-6-9%204-24%2023-25M18%2047c0-16%2014-29%2029-29M27%2027l9%209M36%208l4%208M8%2036l8%204%22%2F%3E%3Cpath%20d%3D%22M8%2068c8-3%2013-8%2015-16M68%208c-3%208-8%2013-16%2015M23%2023l6-10%203%208%208-3-10%2010z%22%20fill%3D%22%23dfc38a%22%20fill-opacity%3D%22.3%22%2F%3E%3Cpath%20d%3D%22M42%2020c9%200%2014-4%2014-10-8-1-14%202-14%2010M20%2042c0%209-4%2014-10%2014-1-8%202-14%2010-14%22%20fill%3D%22%23dfc38a%22%20fill-opacity%3D%22.22%22%2F%3E%3Cpath%20d%3D%22M8%20106l3%204-3%204-3-4zM106%208l4%203%204-3-4-3zM18%2018l5-5%205%205-5%205z%22%20fill%3D%22%23f1dfad%22%20fill-opacity%3D%22.6%22%2F%3E%3C%2Fg%3E%3Cg%20fill%3D%22%23f2dfad%22%3E%3Ccircle%20cx%3D%228%22%20cy%3D%2282%22%20r%3D%221.4%22%2F%3E%3Ccircle%20cx%3D%2282%22%20cy%3D%228%22%20r%3D%221.4%22%2F%3E%3Ccircle%20cx%3D%2239%22%20cy%3D%2239%22%20r%3D%221.3%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+  --divine-rail: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2040%20500%22%20fill%3D%22none%22%3E%3Cg%20stroke%3D%22%23ddc68f%22%20stroke-width%3D%22.8%22%3E%3Cpath%20d%3D%22M20%208v165m0%20154v165M13%2053v102m14%20190v102M20%20193v34m0%2046v34%22%2F%3E%3Cpath%20d%3D%22M20%207l4%207-4%207-4-7zM20%20479l4%207-4%207-4-7zM20%20227l10%2023-10%2023-10-23zM20%20237l5%2013-5%2013-5-13z%22%2F%3E%3Ccircle%20cx%3D%2220%22%20cy%3D%22184%22%20r%3D%228%22%2F%3E%3Ccircle%20cx%3D%2220%22%20cy%3D%22316%22%20r%3D%228%22%2F%3E%3Cpath%20d%3D%22M20%20161c-12-5-14-15-8-20%206%204%206%2011%201%2014M20%20339c12%205%2014%2015%208%2020-6-4-6-11-1-14M20%208c-8%2018-8%2029%200%2040%208-11%208-22%200-40M20%20452c-8%2011-8%2022%200%2040%208-18%208-29%200-40%22%2F%3E%3C%2Fg%3E%3Cg%20fill%3D%22%23f4dfab%22%3E%3Ccircle%20cx%3D%2220%22%20cy%3D%22250%22%20r%3D%222%22%2F%3E%3Ccircle%20cx%3D%2220%22%20cy%3D%22184%22%20r%3D%221.6%22%2F%3E%3Ccircle%20cx%3D%2220%22%20cy%3D%22316%22%20r%3D%221.6%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+  --divine-astrolabe: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20512%20512%22%20fill%3D%22none%22%3E%3Cg%20stroke%3D%22%23dec795%22%20stroke-width%3D%22.9%22%3E%3Ccircle%20cx%3D%22256%22%20cy%3D%22256%22%20r%3D%22221%22%2F%3E%3Ccircle%20cx%3D%22256%22%20cy%3D%22256%22%20r%3D%22211%22%20stroke-dasharray%3D%221%2010%22%2F%3E%3Ccircle%20cx%3D%22256%22%20cy%3D%22256%22%20r%3D%22190%22%2F%3E%3Ccircle%20cx%3D%22256%22%20cy%3D%22256%22%20r%3D%22176%22%2F%3E%3Ccircle%20cx%3D%22256%22%20cy%3D%22256%22%20r%3D%22169%22%20stroke-dasharray%3D%222%209%22%2F%3E%3Ccircle%20cx%3D%22256%22%20cy%3D%22256%22%20r%3D%22106%22%2F%3E%3Ccircle%20cx%3D%22256%22%20cy%3D%22256%22%20r%3D%2244%22%2F%3E%3Cpath%20d%3D%22M256%2035v15%22%20transform%3D%22rotate(0%20256%20256)%22%2F%3E%3Cpath%20d%3D%22M256%2051v7%22%20transform%3D%22rotate(15%20256%20256)%22%2F%3E%3Cpath%20d%3D%22M256%2035v15%22%20transform%3D%22rotate(30%20256%20256)%22%2F%3E%3Cpath%20d%3D%22M256%2051v7%22%20transform%3D%22rotate(45%20256%20256)%22%2F%3E%3Cpath%20d%3D%22M256%2035v15%22%20transform%3D%22rotate(60%20256%20256)%22%2F%3E%3Cpath%20d%3D%22M256%2051v7%22%20transform%3D%22rotate(75%20256%20256)%22%2F%3E%3Cpath%20d%3D%22M256%2035v15%22%20transform%3D%22rotate(90%20256%20256)%22%2F%3E%3Cpath%20d%3D%22M256%2051v7%22%20transform%3D%22rotate(105%20256%20256)%22%2F%3E%3Cpath%20d%3D%22M256%2035v15%22%20transform%3D%22rotate(120%20256%20256)%22%2F%3E%3Cpath%20d%3D%22M256%2051v7%22%20transform%3D%22rotate(135%20256%20256)%22%2F%3E%3Cpath%20d%3D%22M256%2035v15%22%20transform%3D%22rotate(150%20256%20256)%22%2F%3E%3Cpath%20d%3D%22M256%2051v7%22%20transform%3D%22rotate(165%20256%20256)%22%2F%3E%3Cpath%20d%3D%22M256%2035v15%22%20transform%3D%22rotate(180%20256%20256)%22%2F%3E%3Cpath%20d%3D%22M256%2051v7%22%20transform%3D%22rotate(195%20256%20256)%22%2F%3E%3Cpath%20d%3D%22M256%2035v15%22%20transform%3D%22rotate(210%20256%20256)%22%2F%3E%3Cpath%20d%3D%22M256%2051v7%22%20transform%3D%22rotate(225%20256%20256)%22%2F%3E%3Cpath%20d%3D%22M256%2035v15%22%20transform%3D%22rotate(240%20256%20256)%22%2F%3E%3Cpath%20d%3D%22M256%2051v7%22%20transform%3D%22rotate(255%20256%20256)%22%2F%3E%3Cpath%20d%3D%22M256%2035v15%22%20transform%3D%22rotate(270%20256%20256)%22%2F%3E%3Cpath%20d%3D%22M256%2051v7%22%20transform%3D%22rotate(285%20256%20256)%22%2F%3E%3Cpath%20d%3D%22M256%2035v15%22%20transform%3D%22rotate(300%20256%20256)%22%2F%3E%3Cpath%20d%3D%22M256%2051v7%22%20transform%3D%22rotate(315%20256%20256)%22%2F%3E%3Cpath%20d%3D%22M256%2035v15%22%20transform%3D%22rotate(330%20256%20256)%22%2F%3E%3Cpath%20d%3D%22M256%2051v7%22%20transform%3D%22rotate(345%20256%20256)%22%2F%3E%3Cpath%20d%3D%22M256%2061l4%207-4%207-4-7z%22%20transform%3D%22rotate(0%20256%20256)%22%20fill%3D%22%23eddaad%22%20fill-opacity%3D%22.4%22%2F%3E%3Cpath%20d%3D%22M256%2061l4%207-4%207-4-7z%22%20transform%3D%22rotate(45%20256%20256)%22%20fill%3D%22%23eddaad%22%20fill-opacity%3D%22.4%22%2F%3E%3Cpath%20d%3D%22M256%2061l4%207-4%207-4-7z%22%20transform%3D%22rotate(90%20256%20256)%22%20fill%3D%22%23eddaad%22%20fill-opacity%3D%22.4%22%2F%3E%3Cpath%20d%3D%22M256%2061l4%207-4%207-4-7z%22%20transform%3D%22rotate(135%20256%20256)%22%20fill%3D%22%23eddaad%22%20fill-opacity%3D%22.4%22%2F%3E%3Cpath%20d%3D%22M256%2061l4%207-4%207-4-7z%22%20transform%3D%22rotate(180%20256%20256)%22%20fill%3D%22%23eddaad%22%20fill-opacity%3D%22.4%22%2F%3E%3Cpath%20d%3D%22M256%2061l4%207-4%207-4-7z%22%20transform%3D%22rotate(225%20256%20256)%22%20fill%3D%22%23eddaad%22%20fill-opacity%3D%22.4%22%2F%3E%3Cpath%20d%3D%22M256%2061l4%207-4%207-4-7z%22%20transform%3D%22rotate(270%20256%20256)%22%20fill%3D%22%23eddaad%22%20fill-opacity%3D%22.4%22%2F%3E%3Cpath%20d%3D%22M256%2061l4%207-4%207-4-7z%22%20transform%3D%22rotate(315%20256%20256)%22%20fill%3D%22%23eddaad%22%20fill-opacity%3D%22.4%22%2F%3E%3Cpath%20d%3D%22M256%2079v354M79%20256h354M131%20131l250%20250m0-250L131%20381%22%20stroke-opacity%3D%22.45%22%2F%3E%3Cpath%20d%3D%22M256%20126l23%20107%20107%2023-107%2023-23%20107-23-107-107-23%20107-23z%22%20stroke-opacity%3D%22.55%22%2F%3E%3Cellipse%20cx%3D%22256%22%20cy%3D%22256%22%20rx%3D%22190%22%20ry%3D%2288%22%20transform%3D%22rotate(35%20256%20256)%22%2F%3E%3Cellipse%20cx%3D%22256%22%20cy%3D%22256%22%20rx%3D%22190%22%20ry%3D%2288%22%20transform%3D%22rotate(-35%20256%20256)%22%20stroke%3D%22%239acfc5%22%20stroke-opacity%3D%22.8%22%2F%3E%3Cpath%20d%3D%22M256%2033l5%2016-5%208-5-8zM256%20455l5%208-5%2016-5-16zM33%20256l16-5%208%205-8%205zM455%20256l8-5%2016%205-16%205z%22%20fill%3D%22%23f1dfb0%22%20fill-opacity%3D%22.4%22%2F%3E%3C%2Fg%3E%3Cg%20fill%3D%22%23e7d2a0%22%3E%3Ccircle%20cx%3D%22256%22%20cy%3D%22256%22%20r%3D%223%22%2F%3E%3Ccircle%20cx%3D%22366%22%20cy%3D%22146%22%20r%3D%223%22%2F%3E%3Ccircle%20cx%3D%22146%22%20cy%3D%22366%22%20r%3D%223%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+  --divine-crest: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20720%2080%22%20fill%3D%22none%22%3E%3Cg%20stroke%3D%22%23ecd69e%22%20stroke-width%3D%22.9%22%20stroke-linecap%3D%22round%22%3E%3Cpath%20d%3D%22M3%2023h213c38%200%2038%2021%2065%2021%2016%200%2025-10%2018-18-7-8-19-1-12%207%209%209%2027%205%2040-8l33-19%2033%2019c13%2013%2031%2017%2040%208%207-8-5-15-12-7-7%208%202%2018%2018%2018%2027%200%2027-21%2065-21h213%22%2F%3E%3Cpath%20d%3D%22M48%2029h166c36%200%2045%2025%2072%2025%2028%200%2048-12%2074-38%2026%2026%2046%2038%2074%2038%2027%200%2036-25%2072-25h166M333%2030l27-14%2027%2014M345%2043l15-22%2015%2022%22%2F%3E%3Cpath%20d%3D%22M360%205l7%2011-7%2011-7-11z%22%20fill%3D%22%23efdba5%22%20fill-opacity%3D%22.55%22%2F%3E%3Cpath%20d%3D%22M251%2028c-6-12-17-15-25-10%205%209%2013%2012%2025%2010M469%2028c6-12%2017-15%2025-10-5%209-13%2012-25%2010%22%20fill%3D%22%23d7bd7f%22%20fill-opacity%3D%22.35%22%2F%3E%3Cpath%20d%3D%22M323%2031c-7-6-7-15-1-20%207%207%207%2013%201%2020M397%2031c7-6%207-15%201-20-7%207-7%2013-1%2020%22%2F%3E%3C%2Fg%3E%3Cg%20fill%3D%22%23eedaa9%22%3E%3Ccircle%20cx%3D%223%22%20cy%3D%2223%22%20r%3D%221.5%22%2F%3E%3Ccircle%20cx%3D%22717%22%20cy%3D%2223%22%20r%3D%221.5%22%2F%3E%3Ccircle%20cx%3D%22360%22%20cy%3D%2251%22%20r%3D%221.6%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+}
+
+/* Kept above the page surface, below dialogs; only the edge receives light. */
+.divine-perimeter {
+  position: fixed;
+  inset: 0;
+  z-index: 8;
+  overflow: hidden;
+  pointer-events: none;
+  user-select: none;
+  opacity: .66;
+}
+.divine-perimeter *, .divine-perimeter::before, .divine-perimeter::after,
+.sanctuary-ornament, .sanctuary-ornament * ,
+.sanctuary-ornament::before, .sanctuary-ornament::after {
+  pointer-events: none;
+}
+.at-camp .divine-perimeter { opacity: 1; }
+.divine-perimeter::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 95px 68% at 0 48%, #78d7ce31, #73c6c214 48%, transparent 80%),
+    radial-gradient(ellipse 100px 68% at 100% 48%, #e4c97e2b, #d7ba7912 48%, transparent 80%),
+    radial-gradient(ellipse 46% 65px at 50% 0, #dcc88b1f, transparent 85%);
+}
+.divine-perimeter::after {
+  content: '';
+  position: absolute;
+  inset: 8px;
+  border: 1px solid #e4d09b30;
+  border-radius: 3px;
+  box-shadow: inset 0 0 0 3px #091d2333, 0 0 14px #c5d5b50c;
+}
+.perimeter-halo {
+  --perimeter-orbit-size: clamp(860px, 115vw, 1540px);
+  position: absolute;
+  top: calc(var(--perimeter-orbit-size) * -.85);
+  left: 50%;
+  width: var(--perimeter-orbit-size);
+  height: var(--perimeter-orbit-size);
+  background: var(--divine-astrolabe) center / contain no-repeat;
+  opacity: .19;
+  transform: translateX(-50%) rotate(0deg);
+  animation: divine-sky-orbit 240s linear infinite;
+}
+.perimeter-rail {
+  position: absolute;
+  top: 16%;
+  bottom: 12%;
+  width: 35px;
+  background: var(--divine-rail) center / 100% 100% no-repeat;
+  opacity: .82;
+  filter: drop-shadow(0 0 7px #a6dfc83d);
+}
+.rail-left { left: 1px; }
+.rail-right { right: 1px; transform: rotate(180deg); filter: drop-shadow(0 0 7px #e6cb8747); }
+.perimeter-corner {
+  position: absolute;
+  width: 96px;
+  height: 96px;
+  background: var(--divine-filigree) center / contain no-repeat;
+  opacity: .8;
+  filter: drop-shadow(0 0 5px #dac18040);
+}
+.corner-tl { top: 1px; left: 1px; }
+.corner-tr { top: 1px; right: 1px; transform: rotate(90deg); }
+.corner-bl { bottom: 1px; left: 1px; transform: rotate(-90deg); }
+.corner-br { bottom: 1px; right: 1px; transform: rotate(180deg); }
+.in-dungeon .divine-perimeter { display: none; }
+
+/* A stronger double rim and carved gold details without changing hero geometry. */
+.lobby-hero {
+  border-color: #ebd79bb3;
+  box-shadow:
+    inset 0 0 0 2px #e6c88216,
+    inset 0 0 60px #06132177,
+    0 0 0 3px #cfb36f16,
+    0 0 0 5px #80c6b90c,
+    0 20px 65px #0005,
+    -12px 0 42px #91d8c414,
+    12px 0 42px #d4bb7919;
+}
+.lobby-hero::before {
+  border-color: #f0dc9f63;
+  box-shadow: inset 0 0 19px #dfc47c07;
+}
+.sanctuary-ornament {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  overflow: hidden;
+  border-radius: inherit;
+}
+.sanctuary-ornament::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: 16%;
+  width: 68%;
+  height: 72px;
+  background: var(--divine-crest) top center / 100% auto no-repeat;
+  opacity: .77;
+  filter: drop-shadow(0 0 5px #e1ca8633);
+}
+.sanctuary-ornament::after {
+  content: '';
+  position: absolute;
+  right: 34px;
+  bottom: 14px;
+  left: 34px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #e8d49b78 20%, #c4dfc443 50%, #e8d49b78 80%, transparent);
+  box-shadow: 0 -3px #decb9312, 0 0 10px #d9cc9120;
+}
+.sanctuary-crown {
+  position: absolute;
+  right: 2.5%;
+  top: 50%;
+  width: 315px;
+  height: 315px;
+  background: var(--divine-astrolabe) center / contain no-repeat;
+  opacity: .47;
+  transform: translateY(-50%) rotate(-14deg);
+  filter: drop-shadow(0 0 10px #daca8e32);
+  animation: divine-sanctuary-orbit 160s linear infinite;
+}
+.sanctuary-ornament > i {
+  position: absolute;
+  width: 101px;
+  height: 101px;
+  background: var(--divine-filigree) center / contain no-repeat;
+  opacity: .92;
+  filter: drop-shadow(0 0 4px #ecd49740);
+}
+.sanctuary-ornament > i:nth-of-type(1) { top: -1px; left: -1px; }
+.sanctuary-ornament > i:nth-of-type(2) { top: -1px; right: -1px; transform: rotate(90deg); }
+.sanctuary-ornament > i:nth-of-type(3) { bottom: -1px; left: -1px; transform: rotate(-90deg); }
+.sanctuary-ornament > i:nth-of-type(4) { bottom: -1px; right: -1px; transform: rotate(180deg); }
+
+@keyframes divine-sky-orbit {
+  from { transform: translateX(-50%) rotate(0deg); }
+  to { transform: translateX(-50%) rotate(360deg); }
+}
+@keyframes divine-sanctuary-orbit {
+  from { transform: translateY(-50%) rotate(-14deg); }
+  to { transform: translateY(-50%) rotate(346deg); }
+}
+
+@media (max-width: 850px) {
+  .perimeter-rail { width: 26px; opacity: .65; }
+  .perimeter-corner { width: 75px; height: 75px; opacity: .7; }
+  .sanctuary-crown { right: -10px; width: 280px; height: 280px; opacity: .4; }
+  .sanctuary-ornament > i { width: 88px; height: 88px; }
+}
+@media (max-width: 550px) {
+  .divine-perimeter::before {
+    background:
+      radial-gradient(ellipse 31px 65% at 0 48%, #83d9cf24, transparent 80%),
+      radial-gradient(ellipse 31px 65% at 100% 48%, #e5ca8a21, transparent 80%);
+  }
+  .divine-perimeter::after { inset: 3px; border-color: #e3cf9429; }
+  .perimeter-halo { opacity: .12; }
+  .perimeter-rail { top: 23%; bottom: 16%; width: 16px; opacity: .64; }
+  .rail-left { left: -4px; }
+  .rail-right { right: -4px; }
+  .perimeter-corner { width: 53px; height: 53px; opacity: .6; }
+  .corner-tl, .corner-tr { top: -2px; }
+  .corner-bl, .corner-br { bottom: -2px; }
+  .corner-tl, .corner-bl { left: -2px; }
+  .corner-tr, .corner-br { right: -2px; }
+  .sanctuary-ornament::before { top: -2px; left: 8%; width: 84%; height: 43px; opacity: .64; }
+  .sanctuary-ornament::after { right: 22px; bottom: 10px; left: 22px; }
+  .sanctuary-ornament > i { width: 61px; height: 61px; opacity: .88; }
+  .sanctuary-crown { top: 65%; right: -17px; width: 190px; height: 190px; opacity: .44; }
+}
+@media (max-width: 370px) {
+  .perimeter-corner { width: 41px; height: 41px; }
+  .perimeter-rail { width: 14px; }
+  .sanctuary-ornament > i { width: 51px; height: 51px; }
+  .sanctuary-crown { right: -19px; width: 170px; height: 170px; opacity: .4; }
+  .sanctuary-ornament::before { left: 6%; width: 88%; opacity: .55; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .perimeter-halo, .sanctuary-crown { animation: none !important; }
+}
+

@@ -6,7 +6,31 @@ class Soundscape{
  stop(){if(this.loop)clearInterval(this.loop);this.loop=null}
  duck(){if(this.bus)this.bus.gain.setTargetAtTime(.12,this.ctx.currentTime,.1)}
  restore(){if(this.bus)this.bus.gain.setTargetAtTime(.65,this.ctx.currentTime,.2)}
- se(kind){if(!this.ready||!s().audio.se)return;const t=this.ctx.currentTime,melodies={enter:[130.81,196,261.63],select:[523.25,659.25],bond:[261.63,392,523.25,659.25],boss:[82.41,110,164.81,220],drop:[523.25,659.25,783.99,1046.5],break:[100,55,35],heavy:[65,40,30],rise:[261.63,392,523.25,783.99,1046.5,1567.98],evolve:[261.63,392,523.25,659.25,783.99,1046.5,1318.51,1567.98],attack:[330,660,880],impact:[85,55,40],hurt:[180,105,60],heal:[392,523.25,659.25],charge:[220,293.66,392,523.25,783.99],win:[261.63,329.63,392,523.25,659.25,783.99]};(melodies[kind]||melodies.attack).forEach((f,i)=>this.tone(f,t+i*(['win','evolve','rise'].includes(kind)?.115:.055),['win','evolve'].includes(kind)?.7:.19,['impact','heavy','break'].includes(kind)?.08:.045,kind==='hurt'?'sawtooth':'triangle'))}
+ se(kind){
+  if(!this.ready||!s().audio.se)return;
+  const t=this.ctx.currentTime,line=(frequencies,offset,step,duration,volume,type='triangle')=>frequencies.map((f,i)=>[f,offset+i*step,duration,volume,type]);
+  // Layers stay quiet individually; SE bypasses the ducked music bus.
+  const effects={
+   charge:[...line([196,261.63,392],0,.045,.07,.014,'sine'),...line([783.99],.12,0,.12,.012)],
+   attack:[...line([392,587.33,880,1318.51],0,.025,.055,.018),...line([146.83],0,0,.10,.018,'sine')],
+   impact:[...line([94],0,0,.09,.04,'sine'),...line([293.66],.006,0,.06,.018),...line([1174.66],.015,0,.045,.009,'square'),...line([62],.05,0,.11,.025,'sine')],
+   heavy:[...line([73],0,0,.17,.048,'sine'),...line([41],.02,0,.23,.032,'sine'),...line([1567.98],0,0,.035,.01,'square'),...line([293.66,146.83],.025,.045,.07,.014)],
+   break:[...line([659.25,493.88,329.63],0,.045,.11,.021,'square'),...line([1318.51,1760,2093],.09,.035,.10,.01),...line([98],0,0,.12,.03,'sine'),...line([55],.065,0,.20,.028,'sine')],
+   win:[...line([523.25,659.25,783.99,1046.5],0,.085,.18,.025),...line([261.63,329.63,392],.34,0,.42,.012,'sine'),...line([1567.98],.47,0,.27,.01)],
+   'skill-power':[...line([164.81,220,329.63],0,.035,.075,.021,'sawtooth'),...line([440],.10,0,.13,.025,'square'),...line([88],.10,0,.17,.03,'sine')],
+   'skill-heal':[...line([523.25,659.25,783.99],0,.065,.16,.021,'sine'),...line([1046.5],.13,0,.23,.013)],
+   'skill-guard':[...line([196,293.66,392],0,0,.15,.018),...line([783.99],.13,0,.07,.014,'sine'),...line([196],.12,0,.15,.02,'sine')],
+   'skill-pierce':[...line([880,1318.51,1760],0,.018,.04,.017,'square'),...line([220],.04,0,.09,.022,'sine'),...line([2637.02],.04,0,.06,.01)],
+   'skill-drain':[...line([783.99,587.33,392],0,.04,.09,.019),...line([164.81],.10,0,.14,.025,'sine'),...line([329.63,493.88],.14,.055,.09,.012,'sine')],
+   'skill-revive':[...line([261.63,392,523.25,783.99],0,.055,.13,.017,'sine'),...line([659.25,1046.5],.20,0,.26,.015)],
+   combo:[...line([659.25,880,1174.66],0,.034,.07,.019,'square'),...line([293.66],0,0,.11,.02,'sine')],
+   finisher:[...line([82.41,55],0,.035,.20,.039,'sine'),...line([1046.5,1567.98],.012,.025,.06,.013,'square'),...line([523.25,783.99,1046.5],.09,.045,.14,.017)]
+  };
+  const melodies={enter:[130.81,196,261.63],select:[523.25,659.25],bond:[261.63,392,523.25,659.25],boss:[82.41,110,164.81,220],drop:[523.25,659.25,783.99,1046.5],rise:[261.63,392,523.25,783.99,1046.5,1567.98],evolve:[261.63,392,523.25,659.25,783.99,1046.5,1318.51,1567.98],hurt:[180,105,60],heal:[392,523.25,659.25]};
+  const cue=Object.hasOwn(effects,kind)?effects[kind]:Object.hasOwn(melodies,kind)?line(melodies[kind],0,['evolve','rise'].includes(kind)?.115:.055,kind==='evolve'?.7:.19,.045,kind==='hurt'?'sawtooth':'triangle'):effects.attack;
+  for(const[f,offset,duration,volume,type]of cue)this.tone(f,t+offset,duration,volume,type);
+ }
+
  speak(text){if(!this.ready||!s().audio.voice||!window.speechSynthesis||!window.SpeechSynthesisUtterance)return;this.cancelSpeech();const u=new SpeechSynthesisUtterance(text);u.lang='ja-JP';u.rate=1.12;u.onstart=()=>{if(this.bus)this.bus.gain.setTargetAtTime(.14,this.ctx.currentTime,.05)};u.onend=u.onerror=()=>{if(this.bus)this.bus.gain.setTargetAtTime(.65,this.ctx.currentTime,.2)};window.speechSynthesis.speak(u)}
  cancelSpeech(){window.speechSynthesis?.cancel();if(this.bus)this.bus.gain.setTargetAtTime(.65,this.ctx.currentTime,.05)}
 }

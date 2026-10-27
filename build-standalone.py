@@ -8,7 +8,7 @@ sheets={}
 for name in names:
     w,h=struct.unpack('>II',(root/'assets'/name).read_bytes()[16:24]);sheets[name]={'url':data(name),'width':w,'height':h}
 assets={'collection0':data('collection-a-alpha.png'),'collection1':data('collection-b-alpha.png'),'sheets':sheets}
-css=((root/'src/style.css').read_text()+'\n'+(root/'src/fantasy.css').read_text()).replace("url('assets/world-rooms.png')",'url("'+data('world-rooms.png')+'")')
+css='\n'.join((root/'src'/name).read_text() for name in ['style.css','fantasy.css','divine-frame.css','combat-fx.css']).replace("url('assets/world-rooms.png')",'url("'+data('world-rooms.png')+'")')
 for name in ['luminous-sanctuary-v1.png','summon-gate-v1.png']:
     css=css.replace("url('assets/"+name+"')",'url("'+data(name)+'")')
 # Old background rules are overridden; remove their unused remote references too.

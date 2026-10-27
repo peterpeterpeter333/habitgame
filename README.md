@@ -30,6 +30,8 @@ node test-task-continuation.cjs
 node test-focus-mode.cjs
 node test-flexible-tasks.cjs
 node test-gem-rewards.cjs
+node test-battle-fx.cjs
+node test-sound-fx.cjs
 python3 -m http.server 8000 --directory docs
 ```
 
@@ -42,6 +44,11 @@ GitHub Pagesは `main` の `/docs` から公開。更新時は生成したdocs�
 `quest-forge-v4` に保存し、起動時に旧版の保存キー（v1・v2/v3バックアップ）を削除します。
 v4のバックアップのみ読み込み可能。以後の更新でv4を自動リセットしません。
 相棒・全所持品は「課題のリセット」では消えません。
+
+## v4.4.0の演出
+
+属性ごとに異なる衝撃輪・斬撃と、スキル6種のカットインを追加。仲間の攻撃に合わせて敵HPが減り、撃破とボス踏破には専用の光・破片・効果音が入ります。演出はスキップでき、動きを減らす設定では揺れや回転を抑えます。
+拠点の外周まで金の装飾、天球の輪、光の柱を広げ、神殿のような枠を追加しました。戦闘のダメージ計算・時間切れ判定・報酬と保存形式は維持します。
 
 ## v4.3.0のグラフィック
 
