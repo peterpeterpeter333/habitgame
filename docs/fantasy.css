@@ -317,15 +317,32 @@ button:not(.map-node):not(.party-slot):not(.portrait-button):not(:disabled):hove
   overflow: hidden;
   border-color: #d8c3906b;
   background:
-    linear-gradient(180deg, #07142252, #081b2866 32%, #0b2131eb 55%, #0b1c2bfa 80%),
-    url('assets/summon-gate-v1.png') center top / 100% 440px no-repeat,
-    #0c2332;
+    radial-gradient(ellipse at 50% 25%, #416d7b25, transparent 65%),
+    linear-gradient(150deg, #132d3e, #0b1c2b 80%);
   box-shadow: inset 0 0 70px #07142370, 0 16px 55px #0004;
 }
 .gacha > .eyebrow { color: #f1d9a3; text-shadow: 0 2px 14px #031321; }
 .gacha > h1 { text-shadow: 0 3px 22px #04121b; font-weight: 500; }
 .gacha > p { color: #c1d4d4; }
-.gacha .summon-gate { background: radial-gradient(circle, #b0ded524, #82c4cd08 54%, transparent 70%); }
+.gacha .summon-gate {
+  width: min(100%, 680px);
+  height: 320px;
+  margin: 22px auto 25px;
+  overflow: hidden;
+  border: 1px solid #d4c49b60;
+  border-radius: 18px;
+  background: #102737 url('assets/summon-gate-v1.png') center / cover no-repeat;
+  box-shadow: inset 0 0 40px #06121c55, 0 14px 40px #0005, 0 0 35px #9bc7dc12;
+}
+.gacha .summon-gate::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse at 50% 40%, #d7edff24, transparent 58%);
+  animation: fantasy-gate-glow 9s ease-in-out infinite alternate;
+}
+.gacha .summon-gate > span, .gacha .summon-gate > .gate-ring { display: none; }
 .summon-gate > span { color: #f3e4b8; text-shadow: 0 0 22px #f3dc9699, 0 0 45px #8ecfce5c; }
 .gate-ring { border-color: #e4d49cbd; box-shadow: 0 0 25px #c9d69b24, inset 0 0 25px #99d8cc26; }
 .gate-ring::before { color: #f2e1af; background: #173640; text-shadow: 0 0 12px #edcf8d66; }
@@ -375,6 +392,7 @@ footer { border-color: #bacab328; color: #a0b7bd; }
 @keyframes fantasy-mote { 0%, 100% { transform: translate3d(0, 8px, 0); opacity: .12; } 45% { opacity: .8; } 75% { transform: translate3d(12px, -19px, 0); opacity: .38; } }
 @keyframes fantasy-companion { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
 @keyframes fantasy-node-reveal { from { opacity: 0; } to { opacity: 1; } }
+@keyframes fantasy-gate-glow { from { opacity: .2; } to { opacity: .8; } }
 
 @media (max-width: 850px) {
   .lobby-copy { width: 65%; padding-left: 30px; }
@@ -424,9 +442,8 @@ footer { border-color: #bacab328; color: #a0b7bd; }
   .lobby-toolbar > button { width: 100%; margin-top: 13px; }
   .panel { backdrop-filter: none; -webkit-backdrop-filter: none; }
   .modal { border-radius: 17px; }
-  .gacha { background-size: auto, auto 370px, auto; }
   .gacha > h1 { font-size: 28px; line-height: 1.5; }
-  .gacha .summon-gate { width: 220px; height: 220px; }
+  .gacha .summon-gate { width: 100%; height: 240px; }
 }
 
 @media (max-width: 370px) {
@@ -443,7 +460,7 @@ footer { border-color: #bacab328; color: #a0b7bd; }
 
 @media (prefers-reduced-motion: reduce) {
   .lobby-hero::after, .lobby-motes i, .lobby-companion svg.monster-art,
-  .map-region .map-node.frontier, .gate-ring, .summon-gate {
+  .map-region .map-node.frontier, .gate-ring, .summon-gate, .gacha .summon-gate::after {
     animation: none !important;
     transition: none !important;
   }
