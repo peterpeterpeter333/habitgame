@@ -25,6 +25,7 @@ Python 3とNode.js。外部パッケージ不要。
 python3 build.py
 node test-engine.cjs
 node test-app.cjs
+node test-task-continuation.cjs
 python3 -m http.server 8000 --directory docs
 ```
 
@@ -37,6 +38,12 @@ GitHub Pagesは `main` の `/docs` から公開。更新時は生成したdocs�
 `quest-forge-v4` に保存し、起動時に旧版の保存キー（v1・v2/v3バックアップ）を削除します。
 v4のバックアップのみ読み込み可能。以後の更新でv4を自動リセットしません。
 相棒・全所持品は「課題のリセット」では消えません。
+
+## v4.0.1の修正
+
+10個の課題を終えてもHPが残っている冒険は敗北扱いにせず、課題の準備待ちにします。
+次の10課題を設定して、敵・味方HP、スキル、報酬を保ったまま続行できます。準備中の時間は停止します。
+v4.0.0の課題上限で誤って敗北した保存データだけを準備待ちへ復元します。獲得済み報酬は再付与しません。
 
 ## 検証
 
