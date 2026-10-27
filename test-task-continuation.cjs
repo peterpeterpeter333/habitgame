@@ -33,7 +33,7 @@ function retained(game) {
   const state = json(game.s);
   delete state.tasks;
   delete state.nextTask;
-  for (const key of ['tasks', 'index', 'status', 'reason', 'deadline', 'log', 'recoveredTaskLimit']) delete state.battle[key];
+  for (const key of ['tasks', 'index', 'status', 'reason', 'deadline', 'log', 'recoveredTaskLimit', 'taskResults']) delete state.battle[key];
   return state;
 }
 function pause(game) {
