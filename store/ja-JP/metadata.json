@@ -1,5 +1,5 @@
 {
-  "status": "draft_not_submitted",
+  "status": "submitted_for_review",
   "locale": "ja-JP",
   "researched_at": "2026-10-29",
   "name": "QUEST FORGE：習慣化RPG",
@@ -33,12 +33,7 @@
   },
   "sign_in_required": false,
   "release_option_recommendation": "MANUAL",
-  "owner_fields_required": [
-    "App Review contact name, email and international-format phone (private ASC field)",
-    "Final age-rating answers and regional availability",
-    "Archive/signing/build confirmation",
-    "Verify published support/privacy URLs before submission"
-  ],
+  "owner_fields_required": [],
   "validation": {
     "name_characters": 18,
     "subtitle_characters": 17,
@@ -51,10 +46,13 @@
     "Keywords omit terms already covered by the name/subtitle, other app names and unsupported features.",
     "No claim of guaranteed search rank, improved clinical symptoms or daily streak tracking.",
     "This JSON is an authoring draft, not a direct App Store Connect API request.",
-    "Native support statements are source-verified; device/archive validation is still required before submission."
+    "Archive passed 69 package/signature checks; simulator UI verified on iOS 26.5 and 27.0. Physical iPhone testing was not performed. See submission-status.json for the actual submission state."
   ],
   "bundle_id": "com.peterpeterpeter333.habitgame",
   "apple_team_id": "K3MTX6RVB9",
   "developer_seller_confirmed": "MiuraKenichi",
-  "contact_channel": "https://github.com/peterpeterpeter333/habitgame/issues"
+  "contact_channel": "https://github.com/peterpeterpeter333/habitgame/issues",
+  "game_subcategories_selected": [
+    "ROLE_PLAYING"
+  ]
 }

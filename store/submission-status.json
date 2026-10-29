@@ -5,10 +5,26 @@
   "team_id": "K3MTX6RVB9",
   "version": "1.0.0",
   "build": "2",
-  "status": "PREPARE_FOR_SUBMISSION",
+  "status": "WAITING_FOR_REVIEW",
   "signed_archive": "QuestForge-1.0.0-build2.xcarchive",
   "uploaded": true,
-  "submitted_for_review": false,
+  "submitted_for_review": true,
   "upload_evidence": "Xcode Organizer: QuestForge 1.0.0 (2) uploaded",
-  "archive_verification": "69 checks passed"
+  "archive_verification": "69 checks passed",
+  "submitted_date": "2026-10-29",
+  "privacy_status": "PUBLISHED_NO_DATA_COLLECTED",
+  "advertising": false,
+  "in_app_purchases": false,
+  "price": "FREE",
+  "territories": [
+    "JPN"
+  ],
+  "release_option": "MANUAL_AFTER_APPROVAL",
+  "age_rating": "13+",
+  "screenshots": {
+    "dynamic_island_medium": 2,
+    "dynamic_island_large": 3
+  },
+  "review_contact": "Provided privately in App Store Connect; omitted from repository",
+  "support_and_privacy_http_verified": true
 }

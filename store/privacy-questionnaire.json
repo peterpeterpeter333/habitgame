@@ -1,5 +1,5 @@
 {
-  "status": "draft_requires_final_native_build_audit_and_owner_confirmation",
+  "status": "published_no_data_collected_owner_confirmed",
   "researched_at": "2026-10-29",
   "suggested_app_privacy_answer": "No, we do not collect data",
   "condition": "Use this answer only if the final iOS archive has no developer/partner data transmission, analytics, ads, remote crash SDK, tracking, or remote game content. Local processing is not collection for Apple's privacy label. User-directed file export must be described separately from automatic developer collection.",
@@ -81,5 +81,7 @@
     "speech": "AVSpeechSynthesizer ja-JP output; no recording or recognition.",
     "haptics": "UIKit feedback generators for attack/skill/result output.",
     "backup": "UIActivityViewController export and user-selected JSON UIDocumentPicker import; no developer upload endpoint."
-  }
+  },
+  "final_archive_audit": "69 checks passed, build 2; no remote requests, analytics or advertising frameworks",
+  "owner_confirmation_date": "2026-10-29"
 }

@@ -1,26 +1,88 @@
 {
-  "status": "draft_not_a_final_age_rating",
+  "status": "submitted_answers_recorded",
   "researched_at": "2026-10-29",
   "made_for_kids": false,
-  "rating": "Let App Store Connect calculate the rating from the final answers; do not promise 4+.",
+  "rating": "13+ (App Store Connect calculation; local ratings may differ)",
   "suggested_answers": {
-    "real_money_gambling": {"answer":false,"evidence":"No real-money bets, cash prizes, purchasable gems, trading or cash-out."},
-    "loot_boxes_or_randomized_virtual_items": {"answer":true,"status":"conservative draft; read the exact current questionnaire definition before submitting","evidence":"Summoning spends earned virtual gems for randomized companions. Free acquisition of currency does not alone justify answering No. Apple's API mentions randomized virtual-item mechanics; its age-help definition describes purchase-based containers."},
-    "simulated_gambling": {"answer":null,"status":"owner/reviewer assessment required","evidence":"There is no casino, betting game, real-money stake or cash-out, and every summon grants a companion or duplicate stock. Assess whether spending earned virtual gems on a random summon constitutes betting/wagering under the current questionnaire; do not infer the answer solely from no IAP."},
-    "cartoon_or_fantasy_violence": {"suggestion":"Frequent, non-graphic fantasy combat","evidence":"Task completion repeatedly triggers attacks, HP loss and stylized monster defeats; no realistic injury or blood is depicted in the current combat effects."},
-    "guns_or_other_weapons": {"answer":null,"status":"inspect all final creature artwork and attack effects, then answer frequency honestly"},
-    "horror_or_fear": {"answer":null,"status":"inspect boss artwork and atmosphere; do not classify from the title alone"},
-    "realistic_violence_or_gore": {"suggestion":"None, subject to final artwork audit"},
-    "sexual_content_nudity_profanity_drugs": {"suggestion":"None, subject to full content audit"},
-    "messaging_chat_social_media": {"answer":false,"evidence":"No network social features."},
-    "unrestricted_web_access": {"suggestion":false,"condition":"Final native navigation must restrict the game webview to bundled content and open only intentional support/privacy links externally."},
-    "user_generated_content": {"answer":null,"status":"read the current definition; tasks are private local free-form text, with no public sharing or content feed"},
-    "health_or_wellness_medical": {"suggestion":"No diagnosis, treatment, health advice or health-data integration; a general productivity timer only."}
+    "real_money_gambling": {
+      "answer": false,
+      "evidence": "No real-money bets, cash prizes, purchasable gems, trading or cash-out."
+    },
+    "loot_boxes_or_randomized_virtual_items": {
+      "answer": true,
+      "status": "conservative draft; read the exact current questionnaire definition before submitting",
+      "evidence": "Summoning spends earned virtual gems for randomized companions. Free acquisition of currency does not alone justify answering No. Apple's API mentions randomized virtual-item mechanics; its age-help definition describes purchase-based containers."
+    },
+    "simulated_gambling": {
+      "answer": null,
+      "status": "owner/reviewer assessment required",
+      "evidence": "There is no casino, betting game, real-money stake or cash-out, and every summon grants a companion or duplicate stock. Assess whether spending earned virtual gems on a random summon constitutes betting/wagering under the current questionnaire; do not infer the answer solely from no IAP."
+    },
+    "cartoon_or_fantasy_violence": {
+      "suggestion": "Frequent, non-graphic fantasy combat",
+      "evidence": "Task completion repeatedly triggers attacks, HP loss and stylized monster defeats; no realistic injury or blood is depicted in the current combat effects."
+    },
+    "guns_or_other_weapons": {
+      "answer": null,
+      "status": "inspect all final creature artwork and attack effects, then answer frequency honestly"
+    },
+    "horror_or_fear": {
+      "answer": null,
+      "status": "inspect boss artwork and atmosphere; do not classify from the title alone"
+    },
+    "realistic_violence_or_gore": {
+      "suggestion": "None, subject to final artwork audit"
+    },
+    "sexual_content_nudity_profanity_drugs": {
+      "suggestion": "None, subject to full content audit"
+    },
+    "messaging_chat_social_media": {
+      "answer": false,
+      "evidence": "No network social features."
+    },
+    "unrestricted_web_access": {
+      "suggestion": false,
+      "condition": "Final native navigation must restrict the game webview to bundled content and open only intentional support/privacy links externally."
+    },
+    "user_generated_content": {
+      "answer": null,
+      "status": "read the current definition; tasks are private local free-form text, with no public sharing or content feed"
+    },
+    "health_or_wellness_medical": {
+      "suggestion": "No diagnosis, treatment, health advice or health-data integration; a general productivity timer only."
+    }
   },
-  "region_note":"Regional ratings can differ. Choose the actual intended territories and review any region-specific prompts; no regional rating or game licence is asserted here.",
-  "sources":[
+  "region_note": "Regional ratings can differ. Choose the actual intended territories and review any region-specific prompts; no regional rating or game licence is asserted here.",
+  "sources": [
     "https://developer.apple.com/help/app-store-connect/reference/app-information/age-ratings-values-and-definitions",
     "https://developer.apple.com/documentation/appstoreconnectapi/ageratingdeclarationupdaterequest/data-data.dictionary/attributes-data.dictionary",
     "https://developer.apple.com/app-store/review/guidelines/"
-  ]
+  ],
+  "submitted_answers": {
+    "parental_controls": false,
+    "age_assurance": false,
+    "unrestricted_web_access": false,
+    "user_generated_content": false,
+    "social_media": false,
+    "social_media_age_restricted": false,
+    "messaging_and_chat": false,
+    "advertising": false,
+    "profanity_or_crude_humor": "NONE",
+    "horror_or_fear": "INFREQUENT",
+    "alcohol_tobacco_drugs": "NONE",
+    "medical_or_treatment_information": "NONE",
+    "health_or_wellness_topics": false,
+    "mature_or_suggestive_themes": "NONE",
+    "sexual_content_or_nudity": "NONE",
+    "graphic_sexual_content": "NONE",
+    "cartoon_or_fantasy_violence": "FREQUENT",
+    "realistic_violence": "NONE",
+    "graphic_realistic_violence": "NONE",
+    "guns_or_other_weapons": "FREQUENT",
+    "simulated_gambling": "NONE",
+    "contests": "NONE",
+    "real_money_gambling": false,
+    "loot_boxes": true,
+    "age_override": "NONE"
+  }
 }
