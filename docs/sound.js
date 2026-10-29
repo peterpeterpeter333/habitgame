@@ -31,6 +31,6 @@ class Soundscape{
   for(const[f,offset,duration,volume,type]of cue)this.tone(f,t+offset,duration,volume,type);
  }
 
- speak(text){if(!this.ready||!s().audio.voice||!window.speechSynthesis||!window.SpeechSynthesisUtterance)return;this.cancelSpeech();const u=new SpeechSynthesisUtterance(text);u.lang='ja-JP';u.rate=1.12;u.onstart=()=>{if(this.bus)this.bus.gain.setTargetAtTime(.14,this.ctx.currentTime,.05)};u.onend=u.onerror=()=>{if(this.bus)this.bus.gain.setTargetAtTime(.65,this.ctx.currentTime,.2)};window.speechSynthesis.speak(u)}
- cancelSpeech(){window.speechSynthesis?.cancel();if(this.bus)this.bus.gain.setTargetAtTime(.65,this.ctx.currentTime,.05)}
+ speak(text){if(this.ready&&s().audio.voice&&typeof QuestNative!=='undefined'&&QuestNative.available){this.cancelSpeech();QuestNative.speak(text);return}if(!this.ready||!s().audio.voice||!window.speechSynthesis||!window.SpeechSynthesisUtterance)return;this.cancelSpeech();const u=new SpeechSynthesisUtterance(text);u.lang='ja-JP';u.rate=1.12;u.onstart=()=>{if(this.bus)this.bus.gain.setTargetAtTime(.14,this.ctx.currentTime,.05)};u.onend=u.onerror=()=>{if(this.bus)this.bus.gain.setTargetAtTime(.65,this.ctx.currentTime,.2)};window.speechSynthesis.speak(u)}
+ cancelSpeech(){if(typeof QuestNative!=='undefined')QuestNative.cancelSpeech();window.speechSynthesis?.cancel();if(this.bus)this.bus.gain.setTargetAtTime(.65,this.ctx.currentTime,.05)}
 }

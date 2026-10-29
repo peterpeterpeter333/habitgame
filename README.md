@@ -38,6 +38,28 @@ python3 -m http.server 8000 --directory docs
 GitHub Pagesは `main` の `/docs` から公開。更新時は生成したdocsもコミットします。
 単一HTMLは `python3 build-standalone.py /出力先/quest-forge.html`。
 
+## iPhone版の準備と検証
+
+iPhone版は `ios/QuestForge.xcodeproj` の `QuestForge` schemeを使用します。iOS 17以降・縦画面に対応し、ゲームと画像を同梱してオフラインで動作します。Web側の更新後は、リポジトリのルートで次を実行します。準備スクリプトが `build.py` も実行し、公開用ページを含む最新の素材を同梱します。
+
+```sh
+python3 ios/scripts/prepare-ios.py
+node test-native-bridge.cjs
+```
+
+Xcodeで署名・Bundle ID・バージョン・ビルド番号を確認し、既存のプロジェクトをarchiveします。以下の出力先は例です。
+
+```sh
+xcodebuild -project ios/QuestForge.xcodeproj -scheme QuestForge \
+  -configuration Release -destination 'generic/platform=iOS' \
+  -derivedDataPath /tmp/quest-forge/DerivedData \
+  -archivePath /tmp/quest-forge/QuestForge.xcarchive archive
+python3 ios/scripts/verify-package.py \
+  /tmp/quest-forge/QuestForge.xcarchive . --require-signature
+```
+
+検証スクリプトはarchiveを変更せず、同梱素材とソースの一致、iPhone用SDK、アイコン、privacy manifest、署名を確認します。通常の更新では `make-project.py` によるプロジェクト再生成は不要です。実機では通知の許可・拒否、背景からの復帰、読み上げ、ファイルの保存・読み込み、更新後の記録保持も確認します。詳細は `ios/README.native.md`、掲載文と公開ページの元データは `store/` にあります。審査担当の個人連絡先や署名の秘密情報はリポジトリに保存せず、App Store ConnectとXcodeで管理します。archiveの検証、アップロード、審査提出、公開はそれぞれ別の工程です。
+
 ## 保存とリセット
 
 ユーザーの明示的なリセット依頼に従い、v4は新しい旅として開始します。

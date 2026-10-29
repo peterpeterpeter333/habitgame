@@ -13,6 +13,6 @@ for name in ['luminous-sanctuary-v1.png','summon-gate-v1.png']:
     css=css.replace("url('assets/"+name+"')",'url("'+data(name)+'")')
 # Old background rules are overridden; remove their unused remote references too.
 css=css.replace("url('assets/dungeon-backgrounds.png')",'none')
-code='const ASSETS='+json.dumps(assets)+';\n'+'\n'.join((root/'src'/name).read_text() for name in ['catalog.js','engine.js','art.js','sound.js','app.js'])
+code='const ASSETS='+json.dumps(assets)+';\n'+'\n'.join((root/'src'/name).read_text() for name in ['catalog.js','engine.js','art.js','native.js','sound.js','app.js'])
 html=(root/'src/shell.html').read_text().replace('<style>/*STYLE*/</style>','<style>'+css+'</style>').replace('<script>/*CODE*/</script>','<script>'+code+'</script>')
 out.parent.mkdir(parents=True,exist_ok=True);out.write_text(html);print('Built',out.name)

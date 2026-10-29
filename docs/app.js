@@ -4,7 +4,7 @@ const $=q=>document.querySelector(q),esc=x=>String(x).replace(/[&<>"']/g,c=>({'&
 let raw={};try{raw=JSON.parse(localStorage.getItem(KEY)||'{}');for(const k of ['quest-forge-v1','quest-forge-v2-backup','quest-forge-v3-backup'])localStorage.removeItem(k)}catch{}
 let game=new QuestEngine(raw),page='home',selected='',difficulty='normal',boxFilter='owned',busy=false,toastTimer,animationId=0,lastAnnounce='',resolveConfirmation=null,taskCountTimer;
 const s=()=>game.s,D=id=>DUNGEONS.find(d=>d.id===id),R=id=>REGIONS.find(r=>r.id===id),mat=id=>MATERIALS.find(m=>m.id===id);let audio=new Soundscape(),continuationDraft=[];
-function save(){try{localStorage.setItem(KEY,JSON.stringify(s()))}catch{toast('保存できません。「記録」からバックアップを保存してください。')}}
+function save(){try{const json=JSON.stringify(s());localStorage.setItem(KEY,json);if(typeof QuestNative!=='undefined'){QuestNative.post('save',{json});QuestNative.syncBattle(s().battle,s().audio.voice)}}catch{toast('保存できません。「記録」からバックアップを保存してください。')}}
 function toast(t){$('#toast').textContent=t;$('#toast').hidden=false;clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('#toast').hidden=true,4500)}
 function renderChrome(){const active=page==='home'&&s().battle?.status==='active';document.body.classList.toggle('in-dungeon',active);document.body.classList.toggle('at-camp',page==='home'&&!!s().companion&&!s().battle);document.body.classList.toggle('choosing',!s().companion);$('#wallet').innerHTML=`<span>◇<b>${s().gems}</b></span><span>◉<b>${s().gold}</b></span><span>✧<b>${s().essence}</b></span>`;$('#nav').innerHTML=[['home','世界'],['team','仲間'],['summon','召喚'],['materials','素材'],['guide','記録']].map(([id,t])=>`<button data-page="${id}" class="${page===id?'active-tab':''}">${t}</button>`).join('');$('#sound').innerHTML=[['bgm','BGM'],['se','SE'],['voice','時間案内']].map(([k,t])=>`<label><input type="checkbox" data-sound="${k}" ${s().audio[k]?'checked':''}>${t}</label>`).join('')+`<button data-action="audio">${audio.ready?'♪':'音を有効にする'}</button>`}
 function portrait(m,leader=false){return `<div class="creature-card ${m.stage?'evolved':''} ${leader?'leader':''} ${m.category==='companion'?'bonded':''}" style="--c:${m.color}"><span class="element">${m.element} · ★${m.rarity}</span><span class="level">Lv.${m.level}</span>${art(m)}<b>${m.name}</b><div class="small">HP ${m.hp.toLocaleString()} · 攻撃 ${m.attack.toLocaleString()}</div></div>`}
@@ -74,7 +74,7 @@ async function animateBattle(event,view){
    audio.se('attack');
    if(!await pause(130))return;
    if(fx)fx.innerHTML=`<div class="impact-scene impact-${elements[m.element]||'light'}" style="--fx:${m.color}"><i class="impact-ring"></i>${Array.from({length:8},(_,i)=>`<i class="impact-spike" style="--ray:${i}"></i>`).join('')}<div class="impact-slash"></div><div class="damage-pop">${part.damage.toLocaleString()}<small>${esc(m.name)}${part.affinity>1?' · 弱点！':''}</small></div></div>`;
-   sprite?.classList.add('taking-hit');scene?.classList.add('impact-shake');
+   sprite?.classList.add('taking-hit');scene?.classList.add('impact-shake');if(typeof QuestNative!=='undefined')QuestNative.haptic(part.damage>1500?'heavy':'light');
    audio.se(part.damage>1500?'heavy':'impact');
    remaining=Math.max(0,remaining-part.damage);
    const enemyMax=view?.enemyMax||s().battle.enemyMax,hp=$('.enemy-hp i'),hpText=$('.enemy-info > small');
@@ -91,7 +91,7 @@ async function animateBattle(event,view){
   if(event.floorClear){
    sprite?.classList.add('defeated');scene?.classList.add('finisher-shake');
    if(fx)fx.innerHTML=`<div class="defeat-finale ${view?.boss?'boss-finale':''}"><div class="defeat-ring"></div>${Array.from({length:14},(_,i)=>`<i class="defeat-shard" style="--shard:${i}"></i>`).join('')}<div class="defeat-label"><small>${view?.boss?'THE PATH OPENS':'BREAK THROUGH'}</small><strong>${view?.boss?'DUNGEON CLEAR':'撃破'}</strong></div></div>`;
-   audio.se(view?.boss?'finisher':'break');
+   audio.se(view?.boss?'finisher':'break');if(typeof QuestNative!=='undefined')QuestNative.haptic('success');
    if(!await pause(view?.boss?950:800,true))return;
    scene?.classList.remove('finisher-shake');
    if(event.drop?.egg&&fx){
@@ -156,11 +156,13 @@ document.addEventListener('click',async e=>{
    case'summon':await summon();break;
    case'rates':rates();break;
    case'close':closeModal();render();break;
-   case'export':{const blob=new Blob([JSON.stringify(s(),null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='habitgame-v4-backup.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);break}
-   case'import':modal('<h2>旅の記録を読み込む</h2><p class="small">v4のバックアップJSONを貼り付けてください。旧版のデータは読み込めません。</p><textarea id="import-text" aria-label="バックアップデータ"></textarea><button class="primary" data-action="import-confirm">読み込む</button>');break;
-   case'import-confirm':{const data=JSON.parse($('#import-text').value);if(data.version!==4||!Array.isArray(data.tasks)||(data.tasks.length<1||data.tasks.length>100)||!Array.isArray(data.owned)||!Array.isArray(data.team)||!Number.isFinite(data.gems))throw Error('v4のバックアップ形式を確認してください。');if(await ask('現在の旅をこのバックアップに置き換えますか？')){game=new QuestEngine(data);save();audio.stop();closeModal();page='home';selected='';render();toast('旅の記録を読み込みました。')}break}
+   case'export':{if(typeof QuestNative!=='undefined'&&QuestNative.exportBackup(JSON.stringify(s(),null,2)))break;const blob=new Blob([JSON.stringify(s(),null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='habitgame-v4-backup.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);break}
+   case'import':if(typeof QuestNative!=='undefined'&&QuestNative.importBackup())break;modal('<h2>旅の記録を読み込む</h2><p class="small">v4のバックアップJSONを貼り付けてください。旧版のデータは読み込めません。</p><textarea id="import-text" aria-label="バックアップデータ"></textarea><button class="primary" data-action="import-confirm">読み込む</button>');break;
+   case'import-confirm':{const data=JSON.parse($('#import-text').value);if(data.version!==4||!Array.isArray(data.tasks)||(data.tasks.length<1||data.tasks.length>100)||!Array.isArray(data.owned)||!Array.isArray(data.team)||!Number.isFinite(data.gems))throw Error('v4のバックアップ形式を確認してください。');if(await ask('現在の旅をこのバックアップに置き換えますか？')){audio.stop();audio.cancelSpeech();game=new QuestEngine(data);game.settle();save();closeModal();page='home';selected='';render();toast('旅の記録を読み込みました。')}break}
   }
  }catch(err){toast(err instanceof SyntaxError?'JSONの形式を確認してください。':err.message)}
 });
 function settleAndRender(){if(busy)return;const ev=game.settle();if(ev.length){save();audio.se('hurt');if(s().battle.status!=='active'){audio.stop();audio.cancelSpeech()}if(page==='home')render();toast('時間切れ。敵の攻撃を受けました。')}tickView()}
+window.addEventListener('quest-native-ready',()=>{if(typeof QuestNative!=='undefined'){QuestNative._reminderKey='';QuestNative.syncBattle(s().battle,s().audio.voice)}});
+window.addEventListener('quest-native-import',e=>{const json=e.detail?.json;if(typeof json!=='string'||json.length>2*1024*1024)return;modal('<h2>旅の記録を読み込む</h2><p class="small">選んだバックアップを確認して読み込んでください。</p><textarea id="import-text" aria-label="バックアップデータ"></textarea><button class="primary" data-action="import-confirm">読み込む</button>');$('#import-text').value=json});
 game.settle();save();render();setInterval(settleAndRender,250);document.addEventListener('visibilitychange',settleAndRender);window.addEventListener('focus',settleAndRender);

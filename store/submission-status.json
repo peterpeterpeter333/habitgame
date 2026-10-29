@@ -1,0 +1,14 @@
+{
+  "app_store_connect_app_id": "6828248388",
+  "app_store_connect_url": "https://appstoreconnect.apple.com/apps/6828248388/distribution",
+  "bundle_id": "com.peterpeterpeter333.habitgame",
+  "team_id": "K3MTX6RVB9",
+  "version": "1.0.0",
+  "build": "2",
+  "status": "PREPARE_FOR_SUBMISSION",
+  "signed_archive": "QuestForge-1.0.0-build2.xcarchive",
+  "uploaded": true,
+  "submitted_for_review": false,
+  "upload_evidence": "Xcode Organizer: QuestForge 1.0.0 (2) uploaded",
+  "archive_verification": "69 checks passed"
+}

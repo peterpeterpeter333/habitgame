@@ -1,0 +1,85 @@
+{
+  "status": "draft_requires_final_native_build_audit_and_owner_confirmation",
+  "researched_at": "2026-10-29",
+  "suggested_app_privacy_answer": "No, we do not collect data",
+  "condition": "Use this answer only if the final iOS archive has no developer/partner data transmission, analytics, ads, remote crash SDK, tracking, or remote game content. Local processing is not collection for Apple's privacy label. User-directed file export must be described separately from automatic developer collection.",
+  "current_web_code_facts": {
+    "account_or_sign_in": false,
+    "advertising_or_analytics_sdk_found": false,
+    "remote_game_requests_found_in_src": false,
+    "task_progress_settings_storage": "localStorage, quest-forge-v4, on device",
+    "backup": "User-initiated JSON export and import",
+    "voice": "Generated timing announcements; no microphone recording",
+    "in_app_purchases_or_paid_currency": false,
+    "data_types_to_declare_if_current_local_only_architecture_is_preserved": [],
+    "tracking": false,
+    "data_linked_to_identity": false
+  },
+  "native_build_verification": [
+    {
+      "feature": "Bundled WKWebView content",
+      "status": "source verified; final archive/device runtime check pending",
+      "question": "Are all game HTML/JS/images bundled and persistent storage on device, with no remote code/content endpoint?"
+    },
+    {
+      "feature": "Local deadline reminders",
+      "status": "source verified; final archive/device runtime check pending",
+      "question": "Uses local UNUserNotificationCenter only; permission is optional; no APNs token/server; stale notifications cancel on completion, retirement, resume and import."
+    },
+    {
+      "feature": "Native speech",
+      "status": "source verified; final archive/device runtime check pending",
+      "question": "Only speech synthesis output, no audio recording, microphone permission or speech-recognition upload."
+    },
+    {
+      "feature": "Haptics",
+      "status": "source verified; final archive/device runtime check pending",
+      "question": "Output-only feedback; no sensor or usage telemetry collection."
+    },
+    {
+      "feature": "Files import/export",
+      "status": "source verified; final archive/device runtime check pending",
+      "question": "User chooses a JSON file or share destination; only selected files are accessed. Users may deliberately export to a cloud provider, independently of developer collection."
+    },
+    {
+      "feature": "Privacy manifest",
+      "status": "source verified; final archive/device runtime check pending",
+      "question": "Source manifest declares no tracking/collected data and an empty required-reason API list. No UserDefaults or device-uptime/disk-space API use was found in current native sources; audit the final archive/SDK inventory before submission."
+    },
+    {
+      "feature": "Web navigation",
+      "status": "source verified; final archive/device runtime check pending",
+      "question": "No unrestricted embedded web browser; external privacy/support links are intentionally opened and do not expose the game bridge to arbitrary pages."
+    }
+  ],
+  "public_policy_facts_to_cover": [
+    "Task text, task counts, game progress, companions and settings are retained locally.",
+    "No app account, developer cloud synchronization, advertising, tracking or sale of data.",
+    "Uninstalling deletes local app data; exporting/importing backups is the user's choice.",
+    "Chosen Files/share providers may store an exported backup under their own policies.",
+    "Provide a real operator/contact and policy date. Publish a reachable privacy-policy page and include a link inside the app.",
+    "Published policy/support source pages use confirmed developer MiuraKenichi and a public GitHub Issues channel; no private email is exposed."
+  ],
+  "sources": [
+    "https://developer.apple.com/app-store/app-privacy-details/",
+    "https://developer.apple.com/help/app-store-connect/manage-app-information/manage-app-privacy",
+    "https://developer.apple.com/app-store/review/guidelines/",
+    "https://developer.apple.com/support/third-party-SDK-requirements/"
+  ],
+  "verified_native_source_files": [
+    "ios/QuestForgeApp/QuestGameController.swift",
+    "ios/QuestForgeApp/QuestNativeBridge.swift",
+    "ios/QuestForgeApp/NativeSaveStore.swift",
+    "ios/QuestForgeApp/GameView.swift",
+    "ios/QuestForgeApp/PrivacyInfo.xcprivacy",
+    "src/native.js"
+  ],
+  "native_source_facts": {
+    "game_content": "Bundled file URL only; the embedded webview rejects external navigation. User-activated HTTP(S) links open outside the game webview.",
+    "save_copy": "Version-4 JSON in the app Application Support container, with file protection.",
+    "reminders": "Explicit opt-in from settings; UNUserNotificationCenter local deadline reminder with fixed text and no task title. The game Time Announcements setting must also be on. No APNs registration or remote notification server.",
+    "speech": "AVSpeechSynthesizer ja-JP output; no recording or recognition.",
+    "haptics": "UIKit feedback generators for attack/skill/result output.",
+    "backup": "UIActivityViewController export and user-selected JSON UIDocumentPicker import; no developer upload endpoint."
+  }
+}

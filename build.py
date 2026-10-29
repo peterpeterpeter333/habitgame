@@ -3,7 +3,7 @@ import shutil,hashlib,json,struct
 root=Path(__file__).resolve().parent;docs=root/'docs';docs.mkdir(exist_ok=True)
 shutil.copytree(root/'assets',docs/'assets',dirs_exist_ok=True)
 styles=['style.css','fantasy.css','divine-frame.css','combat-fx.css']
-files=['catalog.js','engine.js','art.js','sound.js','app.js']
+files=['catalog.js','engine.js','art.js','native.js','sound.js','app.js']
 for name in styles:shutil.copy2(root/'src'/name,docs/name)
 for name in files:shutil.copy2(root/'src'/name,docs/name)
 revision=lambda name:hashlib.sha256((docs/name).read_bytes()).hexdigest()[:12]
@@ -15,4 +15,6 @@ html=(root/'src/shell.html').read_text().replace('<style>/*STYLE*/</style>',''.j
 scripts='<script>const ASSETS='+json.dumps(assets)+';</script>'+''.join('<script src="'+name+'?v='+revision(name)+'"></script>' for name in files)
 html=html.replace('<script>/*CODE*/</script>',scripts);(docs/'index.html').write_text(html);(docs/'.nojekyll').touch()
 if (root/'research.html').exists():shutil.copy2(root/'research.html',docs/'research.html')
+for name in ['privacy.html','support.html']:
+    if (root/'store/public'/name).exists():shutil.copy2(root/'store/public'/name,docs/name)
 print('Built QUEST FORGE IV')

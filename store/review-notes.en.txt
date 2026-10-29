@@ -1,0 +1,18 @@
+QUEST FORGE is an offline task-list and focus-timer RPG. No sign-in, external account or purchase is required. The app's game content is bundled locally.
+
+Review walkthrough:
+1. Choose one of the three initial companions. This choice is permanent within the current save.
+2. Open task preparation. Standard mode gives 5 minutes per task; focus mode gives 30 minutes per task. The task count is adjustable from 1 to 100. Enter a short task and start the first dungeon.
+3. Tap the completion button to attack. You may tap immediately to inspect gameplay; no real-world task verification or waiting is required. Completing within the deadline causes no enemy counterattack. An enemy attacks only when a task expires.
+4. Tap a party member to reserve a skill, then complete a task to activate it. Animations can be skipped.
+5. Once a task list is exhausted, choose "同じ課題で続ける" to reuse it, or change the list. Preparation pauses the timer and keeps enemy HP, party HP and earned loot. The first dungeon has three battles; repeating a one-task list lets you inspect all three without waiting for the timer.
+6. Party growth, materials and the journey record are available from the main navigation. Backup export/import is in the record section.
+
+Monetization and randomized rewards:
+There are no advertisements, in-app purchases, subscriptions, paid currencies, cash prizes, trading or cash-out. Gems are earned through first dungeon clears. Summoning unlocks after the first normal dungeon clear and spends earned gems on randomized virtual companions. Individual probabilities can be viewed in the app before summoning. A summon always grants a companion or duplicate stock.
+
+Data:
+No account is required. Tasks, game progress and settings are stored on the device. Backups are handled only at the user's request. This app does not include analytics or advertising SDKs.
+
+Native iPhone features:
+Open the top gear icon for app settings. Deadline reminders are optional local notifications: enable them there and leave the in-game Time Announcements option on. Permission denial does not block gameplay. Reminder text does not include the user task title. Timing announcements use AVSpeechSynthesizer; attacks/results use UIKit haptics. Backup export opens the iOS share sheet; import uses the system JSON document picker and then asks before replacing the save. The app also keeps a protected local save copy. No custom web browser, microphone recording or remote game content is included.

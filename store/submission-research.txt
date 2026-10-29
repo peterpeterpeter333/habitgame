@@ -1,0 +1,69 @@
+Apple公式確認日: 2026-10-29。掲載準備資料であり、送信・公開はしていません。
+
+検索・掲載
+nameは2〜30文字、subtitleは30文字以内。日本語案は18文字/17文字。
+KeywordsはASC referenceが100 bytes、一般product-page説明が100 charactersと表記するため、厳しい方に合わせUTF-8で100bytes以内にする。候補は36文字/90bytes、各語3文字以上、コンマ区切り・余計な空白なし。title/subtitleと同じ語、他社商標、競合名、無関係語を重ねない。検索順位は保証できない。
+推奨primary: Productivity / 仕事効率化。secondary: Games / ゲーム。実際に選択可能ならRole Playing/Adventureが内容に合う。primaryはApps/Gamesタブ配置に関わる。カテゴリは検索のためだけに偽らない。
+App Tagsは自由な日本語ハッシュタグ入力ではない。Appleがmetadata等から付与し、現在のヘルプではUS/en_US対象で候補を解除管理する方式。日本向けでは名前・subtitle・keywords・正しいカテゴリを整える。
+
+必須の実情報
+公開Support URL（実際の連絡先を表示）、公開Privacy Policy URL、著作権者、審査担当連絡先の氏名・メール・国際形式の電話番号、Bundle ID、SKU、価格/地域、年齢回答、提出buildが必要。公開URLは下記に決定し、store/publicにHTMLを用意した。公開反映とHTTP到達性は提出前に確認する。公開メールは追加せずGitHub Issuesを問い合わせ先とする。初回リリースにWhat's Newは不要。
+
+ネイティブ機能・4.2
+単なるWebページの再包装を超える、継続的な有用性とアプリとしての体験が審査対象。ローカル同梱の課題/タイマー/RPGに加え、実装・検証したiOSの通知、読み上げ、触覚、Files入出力を審査メモで説明する。ネイティブ機能を足すだけで4.2承認が保証されるわけではない。
+課金がないことと、年齢設問のガチャ・疑似ギャンブル回答は別。詳細はage-rating-questionnaire.json。プライバシー回答はprivacy-questionnaire.jsonに実装確認条件を残した。
+
+提出順と状態
+1. Xcodeの署名・配布archiveを検証し、ASCへuploadしてbuild処理を待つ。
+2. 実build、metadata、スクリーンショット、App Privacy、年齢、輸出関連設問、価格/地域、審査連絡先を揃える。初回はmanual releaseを推奨する判断案。
+3. Add for ReviewはReady for Reviewにする準備操作で、審査送信そのものではない。
+4. Submit for Reviewで送信。Waiting for Review→In Review。承認後manualならPending Developer Release。
+5. 手動releaseが別の公開操作。Ready for Distribution/Processing for Distribution等を確認し、審査提出済みと公開済みを混同しない。
+
+現在の技術要件
+2026-04-28からXcode26以降/iOS26SDK以降、2026-09-09からiOS13以降のdeployment targetが必要。iOS27SDK以降の必須化は2027年4月予定で、現時点の最低条件と分ける。
+iPhone screenshotは1〜10枚、JPEG/PNG、alpha不可。6.9インチ枠のportrait例は1320×2868。提出先の実device classに対応したSimulatorの実画面を使い、未実装の機能や本編の未来の敵・進化を掲載画像で先出ししない。iPad対応を付ける場合は対象の追加画像要件も確認する。
+
+未完了の提出前項目
+- 確認済み: 開発者MiuraKenichi、アプリ名QUEST FORGE：習慣化RPG、copyright 2026 MiuraKenichi。Bundle ID com.peterpeterpeter333.habitgame、Team K3MTX6RVB9。ASCでの登録・署名は親作業で確認。
+- Support: https://peterpeterpeter333.github.io/habitgame/support.html
+- Privacy: https://peterpeterpeter333.github.io/habitgame/privacy.html
+- Contact: https://github.com/peterpeterpeter333/habitgame/issues（投稿は公開・GitHubへのサインイン必要）。公開メールは未使用。審査担当の非公開ASC連絡先は別途必要。
+- 最終native archiveのprivacy/通知取消/backup/外部遷移の検証。
+- 最終画像の年齢回答、配信地域、輸出関連回答、署名team/bundle/build番号。
+- 本資料は登録フォームや審査送信、公開操作を実行しない。
+
+一次ソース（Apple公式のみ）
+App name/subtitle/Bundle ID:
+https://developer.apple.com/help/app-store-connect/reference/app-information/app-information
+Keywords bytes/support/review contact/version release:
+https://developer.apple.com/help/app-store-connect/reference/app-information/platform-version-information
+Keywords characters/重複・無関係語:
+https://developer.apple.com/app-store/product-page/
+Categories:
+https://developer.apple.com/app-store/categories/
+App Tags:
+https://developer.apple.com/help/app-store-connect/manage-app-information/manage-app-tags
+4.2/privacy/購入型random item odds:
+https://developer.apple.com/app-store/review/guidelines/
+App Privacy on-device definition:
+https://developer.apple.com/app-store/app-privacy-details/
+Privacy Policy URL:
+https://developer.apple.com/help/app-store-connect/manage-app-information/manage-app-privacy
+Age ratings:
+https://developer.apple.com/help/app-store-connect/reference/app-information/age-ratings-values-and-definitions
+Age API:
+https://developer.apple.com/documentation/appstoreconnectapi/ageratingdeclarationupdaterequest/data-data.dictionary/attributes-data.dictionary
+Submit an app:
+https://developer.apple.com/help/app-store-connect/manage-submissions-to-app-review/submit-an-app
+Statuses:
+https://developer.apple.com/help/app-store-connect/reference/app-information/app-and-submission-statuses
+Current requirements:
+https://developer.apple.com/news/upcoming-requirements/
+Future SDK deadline:
+https://developer.apple.com/app-store/submitting/
+Screenshots:
+https://developer.apple.com/help/app-store-connect/reference/app-information/screenshot-specifications
+
+ネイティブ読取確認
+ios/QuestForgeAppの5 Swiftソース、Info.plist/PrivacyInfo.xcprivacy、およびsrc/native.jsを確認した。ローカルWeb同梱・保護付きApplication Support保存控え、任意ローカル通知、OS音声合成、触覚、Files/shared backupを実装している。実機/archive上での機能確認は別途必要。プライバシーラベル案と公開ページはこの実装に合わせた。

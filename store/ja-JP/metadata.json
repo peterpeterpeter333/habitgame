@@ -1,0 +1,60 @@
+{
+  "status": "draft_not_submitted",
+  "locale": "ja-JP",
+  "researched_at": "2026-10-29",
+  "name": "QUEST FORGE：習慣化RPG",
+  "subtitle": "タスク管理と集中を、仲間との冒険に",
+  "keywords": "Todo,やること,ゲーミフィケーション,タイマー,継続支援,育成ゲーム",
+  "promotional_text": "小さな達成を、冒険の力に。5分の通常モードと30分の集中モードで、自分の課題を進めながら仲間を育てよう。課題数は自由に調整でき、同じ課題の繰り返しにも対応。広告・アプリ内課金なし。",
+  "description": "やることをひとつ終える。その一歩が、冒険の力になる。\n\nQUEST FORGEは、日々のタスクと集中時間を、仲間と進むRPGにつなげるアプリです。勉強、片づけ、毎日の小さな習慣。自分で決めた課題を達成すると、仲間が攻撃し、霧の向こうへ道が開けていきます。\n\n■ 自分のペースで課題を準備\n課題数は1〜100個。5分の通常モードと、1課題30分の集中モードを選べます。通常は1個、集中は2個から始められます。\n\n■ 達成が、冒険を進める\n残り時間に応じて攻撃の威力が変化。仲間のスキルを予約して、達成の瞬間を楽しめます。敵の攻撃は時間切れのときだけです。\n\n■ 同じ課題を、もう一度\n課題を一巡したら、同じ課題ですぐに続行。内容や課題数を変えて続けることもできます。準備中は時間が止まり、戦闘の続きから再開できます。\n\n■ 出会った仲間と、少しずつ成長\n仲間を編成し、育成や進化を楽しめます。新しい土地や姿は、冒険を進めてから記録に残ります。\n\n■ 音と演出を自分好みに\nBGM・効果音・時間案内は個別に切り替え可能。演出はスキップでき、動きを減らす設定にも対応します。\n\n■ アカウントも、課金も不要\n広告・アプリ内課金はありません。魔法石は冒険で獲得し、ランダムな仲間との出会いに使います。提供割合はアプリ内で確認できます。現金との交換はできません。\n\niPhoneでは任意の終了通知、OSによる時間案内、触覚フィードバック、ファイル選択・共有を利用できます。\n\n課題と冒険の記録は端末内に保存されます。バックアップの保存・読み込みにも対応しています。アプリを削除すると端末内の記録も消えるため、機種変更前にバックアップをご利用ください。",
+  "primary_category": {
+    "id": "PRODUCTIVITY",
+    "display_name_ja": "仕事効率化"
+  },
+  "secondary_category": {
+    "id": "GAMES",
+    "display_name_ja": "ゲーム"
+  },
+  "game_subcategories_if_available": [
+    "ROLE_PLAYING",
+    "ADVENTURE"
+  ],
+  "price_recommendation": "free",
+  "in_app_purchases": false,
+  "support_url": "https://peterpeterpeter333.github.io/habitgame/support.html",
+  "privacy_policy_url": "https://peterpeterpeter333.github.io/habitgame/privacy.html",
+  "marketing_url": null,
+  "copyright": "2026 MiuraKenichi",
+  "review_contact": {
+    "first_name": null,
+    "last_name": null,
+    "email": null,
+    "phone_international": null
+  },
+  "sign_in_required": false,
+  "release_option_recommendation": "MANUAL",
+  "owner_fields_required": [
+    "App Review contact name, email and international-format phone (private ASC field)",
+    "Final age-rating answers and regional availability",
+    "Archive/signing/build confirmation",
+    "Verify published support/privacy URLs before submission"
+  ],
+  "validation": {
+    "name_characters": 18,
+    "subtitle_characters": 17,
+    "keywords_characters": 36,
+    "keywords_utf8_bytes": 90,
+    "promotional_text_characters": 90,
+    "description_characters": 720
+  },
+  "notes": [
+    "Keywords omit terms already covered by the name/subtitle, other app names and unsupported features.",
+    "No claim of guaranteed search rank, improved clinical symptoms or daily streak tracking.",
+    "This JSON is an authoring draft, not a direct App Store Connect API request.",
+    "Native support statements are source-verified; device/archive validation is still required before submission."
+  ],
+  "bundle_id": "com.peterpeterpeter333.habitgame",
+  "apple_team_id": "K3MTX6RVB9",
+  "developer_seller_confirmed": "MiuraKenichi",
+  "contact_channel": "https://github.com/peterpeterpeter333/habitgame/issues"
+}

@@ -3,3 +3,9 @@ __pycache__/
 *.pyc
 
 qa-*.html
+
+# Generated iPhone resources and local Xcode state
+ios/QuestForgeApp/Web/
+**/xcuserdata/
+*.xcarchive/
+*.ipa
